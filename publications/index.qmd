@@ -1,0 +1,227 @@
+---
+title: ""
+echo: false
+section-divs: false
+keep-md: true
+---
+  
+```{=html}
+<!-- Start of the HTML code for scrolling image with text overlay -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Over Scrolling Image</title>
+    <style>
+        .scroll-container {
+            position: relative;
+            overflow: hidden;
+            width: 900px; /* Adjust width as needed */
+            height: 100px; /* Adjust height as needed */
+        }
+
+        .scroll-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: scroll 30s linear infinite; /* This contains the speed */
+            z-index: -1; /* Place the image behind the text */
+        }
+
+        .text-overlay {
+            <!-- position: absolute; -->
+            <!-- top: 50%; -->
+            <!-- left: 50%; -->
+            <!-- transform: translate(-50%, -50%); --> -->
+            <!-- <!-- max-width: 80%; /* Limit the maximum width of the text overlay */ --> -->
+            <!-- padding: 10px; /* Adjust padding top and bottom (5px) */ -->
+            <!-- background-color: rgba(0, 0, 0, 0.7); /* Add a background color with some opacity */ -->
+            <!-- color: white; /* Text color */ -->
+            <!-- z-index: 1; /* Place the text above the image */ -->
+        
+        
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: red; /* Text color */ -->
+            z-index: 1; /* Place the text above the image */
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <img class="scroll-image" src="img/composite-image.jpg" alt="Scrolling Background Image">
+        <div class="text-overlay">
+            <h1>Research</h1>
+        </div>
+    </div>
+</body>
+</html>
+<!-- End of the HTML code -->
+```
+
+
+```{r}
+read_yaml <- function(file) {
+  yaml::yaml.load_file(file)
+}
+
+readable_list <- function(s) {
+  if (length(s) < 3) {
+    return(paste(collapse = " and ", s))
+  }
+  a <- s[-length(s)]
+  b <- s[length(s)]
+  return(paste(paste(collapse = ", ", a), " and ", b))
+}
+
+button <- function(url, str, icon) {
+  icon_base <- substr(icon, 1, 2)
+  return(paste(
+    "<a class='btn btn-outline-dark btn-sm' href='", url,
+    "' target='_blank' rel='noopener noreferrer'>",
+    "<i class='", icon_base, " ", icon,
+    "' role='img' aria-label='", str, "'></i>", str,
+    "</a>", sep = ""
+  ))
+}
+
+yaml_data <- read_yaml("pubs.yaml")
+pub_strs <- list(pubs = list(), wps = list())
+
+for (key in names(yaml_data)) {
+  data <- yaml_data[[key]]
+  title_str <- data[["title"]]
+  authors <- data[["authors"]]
+  
+  # my script to change authors names
+  authors_new <- character(0)
+  for (i in 1:length(authors)) {
+    auth <- authors[i]
+    # Remove leading and trailing spaces and split by commas
+    parts <- unlist(strsplit(trimws(auth), ","))
+    if (length(parts) > 1) {
+    # Rearrange the parts and create initials
+    names <- strsplit(trimws(parts[2:length(parts)]), " ")
+    names <- unlist (names)
+    initials <- paste0(substr(names, 1, 1), ".")
+    new_string <- paste(unlist(list(c(initials))), collapse = " ")
+    rearranged_string <- paste(new_string, parts[1], sep = " ")
+    # cat(rearranged_string, "\n")
+    authors_new[i] <- rearranged_string
+    } else {
+      authors_new[i] <- auth
+    }
+  }
+  authors <- authors_new
+  # to here
+  
+  if (is.null(authors)) {
+    authors <- c("me")
+  }
+  authors <- ifelse(authors != "me", authors, "<strong>G. Rush</strong>")
+  author_str <- readable_list(authors)
+  year_str <- data[["year"]]
+  journal_str <- data[["journal"]]
+  
+  buttons <- character(0)
+  # preprint <- data[["preprint"]]
+  # if (!is.null(preprint)) {
+  #   buttons <- c(buttons, button(preprint, "Preprint", "bi-file-earmark-pdf"))
+  # }
+  
+  # github <- data[["github"]]
+  # if (!is.null(github)) {
+  #   buttons <- c(buttons, button(github, "Github", "bi-github"))
+  # }
+  
+  pub_url <- data[["published_url"]]
+  venue <- data[["venue"]]
+  working_paper <- is.null(pub_url)
+  
+  pub_str <- paste(
+    # author_str, " (", year_str, ") /"", title_str, "/".", sep = ""
+    author_str, " (", year_str, ") \"", title_str, "\".", " ", journal_str, sep = ""
+  )
+  
+  if (!is.null(venue)) {
+    pub_str <- paste(pub_str, " <em>", venue, "</em>", sep = "")
+  }
+  
+  if (working_paper) {
+    if (!year_str %in% names(pub_strs[["wps"]])) {
+      pub_strs[["wps"]][[as.character(year_str)]] <- character(0)
+    }
+    pub_strs[["wps"]][[as.character(year_str)]] <- c(
+      pub_strs[["wps"]][[as.character(year_str)]],
+      paste("<li class='list-group-item'>", pub_str, "<br>",
+            paste(buttons, collapse = " "), "</li>", sep = "")
+    )
+  } else {
+    if (!year_str %in% names(pub_strs[["pubs"]])) {
+      pub_strs[["pubs"]][[as.character(year_str)]] <- character(0)
+    }
+    buttons <- c(buttons, button(pub_url, "Access the orignal article", "ai-archive"))
+    pub_strs[["pubs"]][[as.character(year_str)]] <- c(
+      pub_strs[["pubs"]][[as.character(year_str)]],
+      paste("<li class='list-group-item'>", pub_str, "<br>",
+            paste(buttons, collapse = " "), "</li>", sep = "")
+    )
+  }
+}
+```
+
+## Published
+
+```{r}
+#| label: "published-year"
+#| id: "published-year"
+#| output: asis
+years <- names(pub_strs[["pubs"]])
+# for (year in rev(years)) {
+for (year in years) {
+  cat("### ", year, "\n")
+cat(paste(
+  # "<ul class='list-group list-group-flush'>\n",
+  # sapply(years, function(year) {
+    paste(pub_strs[["pubs"]][[as.character(year)]], collapse = "\n")
+  # }),
+  # "</ul>\n",
+  # sep = ""
+))
+}
+```
+
+## Working Papers / Non-archival
+
+```{r}
+#| label: "not-published-year"
+#| id: "not-published-year"
+#| output: asis
+years <- names(pub_strs[["wps"]])
+for (year in rev(years)) {
+  cat("### ", year, " {#", "not-published-", year, "}\n")
+}
+cat(paste(
+  "<ul class='list-group list-group-flush'>\n",
+  sapply(years, function(year) {
+    paste(pub_strs[["wps"]][[year]], collapse = "\n")
+  }),
+  "</ul>\n",
+  sep = ""
+))
+```
+
