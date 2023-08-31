@@ -118,3 +118,39 @@ $btn-code-copy-color-active: $orange !default;
         }
     }
 }
+
+
+// this is my code form here GR
+
+
+// Override the default color for .list-group-item
+.list-group-item {
+    background-color: $gray-100; /* Replace with your desired color */
+    border: 1px solid $gray-500; /* Replace with your desired border color */
+    padding: 10px;
+    margin-bottom: 10px;
+    color: $gray-900; /* Replace with your desired text color */
+
+    // Change the background color on hover
+    &:hover {
+        color: $black; /* Replace with your desired hover color */
+    }
+}
+
+// You can also style the buttons inside .list-group-item
+.list-group-item .btn {
+    background-color: #your-button-color-here; /* Replace with your desired button color */
+    color: #your-button-text-color-here; /* Replace with your desired button text color */
+}
+
+/* Apply full justification to all paragraphs */
+//p {
+//    text-align: justify;
+//}
+
+/* Apply specific styles to <p> elements within #about-block */
+#about-me p {
+    /* Your custom styles here */
+    text-align: justify;
+    /* Add more styles as needed */
+}

@@ -1,40 +1,219 @@
 ---
 about:
-  template: jolla
-  id: about-block
-  image: "img/my_image.jpg"
+  template: trestles # jolla trestles solana marquee broadside
+  id: about-me
+  # template: trestles
+  image-shape: round
+  image-width: 10em
+  image: "img/profile.jpg"
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com/MarvinSchmittML
-    - icon: github
-      text: Github
-      href: https://github.com/marvinschmitt
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/marvin-schmitt-a85b321a2/
+      url: https://twitter.com/goatyrush
+    # - icon: globe
+    #   text: Github
+    #   href: https://github.com/Graham-Rush
+    # - icon: linkedin
+    #   text: LinkedIn
+    #   href: https://www.linkedin.com/in/marvin-schmitt-a85b321a2/
     - icon: envelope
       text: Email
-      href: "mailto:mail.marvinschmitt@gmail.com"  
+      href: "mailto:g.rush@leedsbeckett.ac.uk"  
 ---
 
-::: {#about-block}
-:::
+```{=html} 
+<!-- Slideshow container -->
+<div class="slideshow-container">
 
-# Welcome to my website!
+  <!-- Full-width images with number and caption text -->
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">7 / 3</div> -->
+  <img src="../img/lecture1.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">1 / 3</div> -->
+  <img src="../img/ythan-marsh1.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">9 / 3</div> -->
+  <img src="../img/os1.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">2 / 3</div> -->
+  <img src="../img/lecture2.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">3 / 3</div> -->
+  <img src="../img/8map.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">4 / 3</div> -->
+  <img src="../img/plane.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">5 / 3</div> -->
+  <img src="../img/paper.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">6 / 3</div> -->
+  <img src="../img/survey.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">8 / 3</div> -->
+  <img src="../img/sun.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
 
-I am Gandalf the White, a renowned wizard and scholar of Middle-earth. Over the centuries, I have dedicated my life to studying the history, languages, and cultures of the peoples of Middle-earth. On this website, I offer a glimpse into my vast body of knowledge, ongoing research, and publications.
-
-My research interests span the entirety of Middle-earth, from the distant past to the present day. I am particularly passionate about the languages and mythologies of the Elves, Dwarves, and Men, and I have made significant contributions to the understanding of these subjects. My studies of the natural world have also been extensive, and I am an expert in the flora and fauna of Middle-earth. Additionally, I have been involved in many important historical events and offer valuable first-hand accounts and insights on the past.
-
-Not only am I a scholar, but I am also a mentor and teacher. Over the centuries, I have had the honor of working with many young wizards, passing on my knowledge and experience to the next generation. I have a particular interest in the education of hobbits, whom I see as having great potential despite their small size and simple lifestyle. My teaching style is engaging and accessible, and I encourage my students to think critically and creatively.
-
-On this website, you will find a selection of my published works, including scholarly articles, monographs, and translations. You will also find news and updates on my current research projects, as well as information on upcoming events and conferences where I will be speaking. I invite you to explore my website and learn more about my life's work as one of Middle-earth's greatest scholars and thinkers.
-Please feel free to [contact me](mailto:mail.marvinschmitt@gmail.com) if you have any questions or would like to discuss potential projects.
-
-```{=html}
-<div  style="margin: 30px; text-align: center;">
-<a class="btn btn-primary" href="https://www.marvinschmitt.com/blog/website-tutorial-quarto/" role="button" target="_blank" style="padding: 15px 30px;">View the tutorial for this template (+ download link)</a>
-</div>
+  <!-- Next and previous buttons -->
+  <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
+  <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+  </div>
+  
+  <!-- ... Rest of your header content ... -->
+  
+  <style>
+    /* Your CSS styles for the slideshow go here */
+    /* Slideshow container */
+    .slideshow-container {
+      width: 100%; /* Set the desired width for the container. I need this to match the image ratio, as it does now for image 2 */
+      height: 100px; /* Set the desired height for the container */
+      overflow: hidden; /* Hide any overflowing content */
+      position: relative;
+      margin: auto;
+    }
+  
+    .image-container img {
+    width: 100%; /* Take up the full width of the container */
+      height: 100%; /* Take up the full height of the container */
+      object-fit: cover; /* Maintain aspect ratio and cover entire container */
+      display: block; /* Remove any extra spacing caused by inline display */
+  }
+  
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+  
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;    
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+  
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+        font-size: 48px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Text overlay */
+    .text-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: red; /* Text color */
+        z-index: 1; /* Place the text above the image */
+    }
+  
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+        font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+  
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 30s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .8}
+      to {opacity: 1}
+    }
+  </style>
+  
+  <script>
+    // Your JavaScript code for the slideshow goes here
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+  </script>
 ```
+
+::: {#about-me}
+<!-- ::: # add this to leave text below the image -->
+
+# Welcome
+
+Graham is a lecturer in Physical Geography and Environmental Science at <a href="https://www.leedsbeckett.ac.uk/school-of-built-environment-engineering-and-computing/" target="_blank" rel="noopener">Leeds Beckett University</a>
+He is interested in the Earth System, particularly the interactions between, ice sheets, oceans and climate and specialises in reconstructing sea-level change in order to understand ice sheet histories. Graham has a broad interest across the subject area and continues to work and develop projects to study sea-level change and the use of GIS and remote sensing.
+
+Graham's research primarily focuses on reconstructing sea-level change in order to understand ice-sheet histories and changes to ocean circulation patterns and how these can inform future predictions of environmental change. He combines different types of analysis including fieldwork, laboratory, numerical modelling and spatial analysis in his research and teaching. He has worked at various sites in the UK, as well as places such as the Falkland Islands, Swiss Alps and Antarctica.
+
+Graham originally left education to become a professional footballer with Cambridge United and then went on to become a plasterer. His work eventually took him to help with the build of Halley VI Research Station in Antarctica. This, along with much travelling, including cycling from Los Angeles to Buenos Aires, fired a curiosity and passion for studying and teaching geography. He then went on to study for a BSc and MSc at the University of Gloucestershire before completing his PhD at the University of York.
+
+Please feel free to [contact me](mailto:g.rush@leedsbeckett.ac.uk) if you have any questions or would like to discuss potential projects.
+
+:::  
+<!-- remove these ::: to put text below image  -->
+
+<!-- ```{=html} -->
+<!-- Text to add link to the source code -->
+<!-- <div  style="margin: 30px; text-align: center;"> -->
+<!-- <a class="btn btn-primary" href="https://www.marvinschmitt.com/blog/website-tutorial-quarto/" role="button" target="_blank" style="padding: 15px 30px;">View the tutorial for this template (+ download link)</a> -->
+<!-- </div> -->
+<!-- ``` -->
 

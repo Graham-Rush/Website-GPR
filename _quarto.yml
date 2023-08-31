@@ -2,37 +2,46 @@
 
 # website settings
 website:
-  title: "Gandalf"                                # Your name
-  description: "Gandalf is a renowned wizard and scholar of Middle-earth"   # A brief slogan (optional)
+  title: "Graham Rush"                                # Your name
+  description: "Graham Rush. Lecturer at Leeds Beckett University."   # A brief slogan (optional)
   image: img/my_image.jpg
   
-  favicon: img/favicon.png
+  favicon: img/survey-icon.png
+  
+  reader-mode: true # if you’d like users to be able to hide the side navigation and table of contents and have a more focused reading experience, you can enabled reader-mode. When enabled, a reader-mode toggle will appear on the navbar, if present, or on the sidebar. When pressed, the toggle will ‘roll up’ the sidebar and table of contents.
   
   # start of the navigation bar at the top of the website
   navbar:
     pinned: true
-    logo: /img/logo.png
+    logo: /img/profile.jpg
     
     # your sub-pages
     left:
       - text: "Projects"
         href: projects/index.qmd
-      - text: "Photography"
-        href: photography/index.qmd
-      - text: "CV"
-        href: cv/index.qmd
+      # - text: "Photography"
+      #   href: photography/index.qmd
+      - text: "Publications"
+        href: publications/index.qmd
+      # - text: "CV"
+      #   href: cv/index.qmd
+      # - text: "Slideshow"
+      #   href: slideshow/index.qmd
+      
     
     # your social media handles
     right:
-      - icon: folder-symlink
-        href: https://www.marvinschmitt.com/blog/website-tutorial-quarto/
+      # - icon: folder-symlink
+      #   href: https://www.marvinschmitt.com/blog/website-tutorial-quarto/
+      # - text: '<i class="fas fa-link"></i> Link Text'
+      #   href: https://www.marvinschmitt.com/blog/website-tutorial-quarto/
       - icon: twitter
-        href: https://twitter.com/MarvinSchmittML
-      - icon: linkedin
-        href: https://www.linkedin.com/in/marvin-schmitt-a85b321a2/
+        href: https://twitter.com/goatyrush
+      # - icon: linkedin
+      #   href: https://www.linkedin.com/in/marvin-schmitt-a85b321a2/
       - icon: envelope
         aria-label: email
-        href: "mailto:mail.marvinschmitt@gmail.com"  
+        href: "mailto:g.rush@leedsbeckett.ac.uk"
   
   
 
@@ -42,18 +51,31 @@ website:
     type: textbox
   page-footer: 
     left: |
-      <span class="faux-block">&#169; 2023 Marvin Schmitt CC BY-SA 4.0</span>
+      <span class="faux-block">&#169; 2023 Graham Rush CC BY-SA 4.0</span>
     center: |
-      <span class="faux-block"><a href="https://www.marvinschmitt.com/blog/website-tutorial-quarto/">View the tutorial for this template!</a></span>
     right: |
-      <span class="faux-block"><a href="https://github.com/marvinschmitt/quarto-website-template/">View source on GitHub</a></span>
-
+      <span class="faux-block"> Built with [Quarto](https://quarto.org/) and [RStudio](https://posit.co/products/open-source/rstudio/) </span>
+#  sidebar:
+  #   style: "docked" # or "docked", "floating"
+  #   search: false
+  #   contents:
+  #     - section: "Menu"
+  #       contents:
+  #         - text: "Projects"
+  #           href: projects/index.qmd
+  #         - text: "Publications"
+  #           href: publications/index.qmd
+          # - text: "Slideshow"
+          #   href: slideshow/index.qmd
+  # add page navigation
+  page-navigation: true
+  
 project:
   type: website
   output-dir: docs
 
   preview: 
-    port: 22222
+    port: 443
     browser: true
     watch-inputs: true
     navigate: true
@@ -65,11 +87,13 @@ format:
   html:
     fontsize: 1.1em
     theme: 
-      - pulse
+      - minty
       - html/styles.scss
-    toc: false
+    toc: true
     code-link: true
     anchor-sections: true
     fig-cap-location: margin
     reference-location: margin
     footnotes-hover: true
+    link-external-newwindow: true # this opens any links in a new tab
+    
