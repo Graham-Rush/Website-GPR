@@ -1,0 +1,82 @@
+<!-- Slideshow container for the title block banner -->
+<div class="title-block-banner-slideshow">
+    <!-- First slide -->
+    <div class="mySlides fade">
+        <img src="../img/paper.jpg" style="width:100%">
+        <div class="text-overlay">
+            <h1 class="title_text">Teaching</h1>
+        </div>
+    </div>
+
+    <!-- Second slide -->
+    <div class="mySlides fade">
+        <img src="../img/survey.jpg" style="width:100%">
+        <div class="text-overlay">
+            <h1 class="title_text">{{page_title}}</h1>
+        </div>
+    </div>
+
+    <!-- Add more slides as needed -->
+</div>
+
+<style>
+    /* Your CSS styles for the slideshow go here */
+    /* Slideshow container */
+    .title-block-banner-slideshow {
+        width: 100%; /* Set the desired width for the container */
+        overflow: hidden; /* Hide any overflowing content */
+        position: relative;
+        margin: auto;
+        border: 2px solid #068194; /* Add a border around the container */
+        background-color: #EE6A24; /* Set a default background color for the title block */
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 5s; /* Adjust the duration as needed */
+    }
+
+    @keyframes fade {
+        from { opacity: .8 }
+        to { opacity: 1 }
+    }
+
+    /* Text overlay styles */
+    .text-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: red; /* Text color */
+        /* background-color: rgba(0, 0, 0, 0.5); Background color with transparency */
+    }
+</style>
+
+<script>
+    // Your JavaScript code for the slideshow goes here
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds (adjust as needed)
+    }
+</script>

@@ -1,0 +1,217 @@
+---
+title: ""
+---
+
+<!-- create a banner with images that scroll. You need to edit the text (at the bottom of the JS) and images (in the html) and length of animation in line 93 -->
+```{=html}
+<!-- Slideshow container for the title block banner -->
+<div class="title-block-banner-slideshow">
+    <!-- First slide -->
+    <div class="mySlides fade">
+        <img src="../img/paper.jpg" style="width:100%">
+        <div class="text-overlay">
+            <h1 class="title_text">{{page_title}}</h1>
+        </div>
+    </div>
+
+    <!-- Second slide -->
+    <div class="mySlides fade">
+        <img src="../img/lecture1.jpg" style="width:100%">
+        <div class="text-overlay">
+            <h1 class="title_text">{{page_title}}</h1>
+        </div>
+    </div>
+    
+    <!-- Second slide -->
+    <div class="mySlides fade">
+        <img src="../img/lecture2.jpg" style="width:100%">
+        <div class="text-overlay">
+            <h1 class="title_text">{{page_title}}</h1>
+        </div>
+    </div>
+
+    <!-- Add more slides as needed -->
+</div>
+
+<style>
+    /* Your CSS styles for the slideshow go here */
+    /* Slideshow container */
+    .title-block-banner-slideshow {
+        width: 100%; /* Set the desired width for the container */
+        overflow: hidden; /* Hide any overflowing content */
+        position: relative;
+        margin: auto;
+        border: 2px solid #068194; /* Add a border around the container */
+   }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 10s; /* Adjust the duration as needed */
+    }
+
+    @keyframes fade {
+        from { opacity: 1 }
+        to { opacity: 1 }
+    }
+
+    /* Text overlay styles */
+    .text-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        # color: red; /* Text color */
+        /* background-color: rgba(0, 0, 0, 0.5); Background color with transparency */
+    }
+</style>
+
+<script>
+    // Your JavaScript code for the slideshow goes here
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 10000); // Change image every 5 seconds (adjust as needed)
+    }
+    
+    // Define your page titles (customize as needed)
+    const pageTitles = ['Teaching', 'Example Page 1', 'Another Page', 'Page 4'];
+    
+    // Function to replace placeholders with the provided title
+    function renderPageWithTitle(title) {
+        // Replace the {{page_title}} placeholder with the actual title
+        document.querySelectorAll('.title_text').forEach((element) => {
+            element.textContent = title;
+        });
+    }
+    
+    // Call the function with a specific title (e.g., 'Teaching')
+    renderPageWithTitle(pageTitles[0]);    
+</script>
+```
+
+# Teaching 
+
+<!-- create a banner with images that are static. You need to edit the text and images manually-->
+```{=html}
+<!-- <!-- HTML and CSS code for the title block banner with a static image -->
+<!-- <style> -->
+<!-- /* Add CSS styling to your title block banner */ -->
+<!-- .title-block-banner { -->
+<!--     background-color: #EE6A24; -->
+<!--     color: white; -->
+<!--     padding: 20px; -->
+<!--     text-align: center; -->
+<!--     position: relative; /* Required for absolute positioning of the image */ -->
+<!-- } -->
+
+<!-- /* Style for the image within the title block banner */ -->
+<!-- .title-block-image { -->
+<!--     position: absolute; -->
+<!--     top: 0; -->
+<!--     right: 0; -->
+<!--     width: 100%; /* Set the width to 100% to fill the banner */ -->
+<!--     height: 100%; /* Set the height to 100% to fill the banner */ -->
+<!--     object-fit: cover; /* Maintain aspect ratio and cover the entire space */ -->
+<!-- } -->
+
+<!-- /* Style for the text within the title block banner */ -->
+<!-- .title-block-text { -->
+<!--     position: relative; -->
+<!--     z-index: 1; /* Place the text above the image */ -->
+<!-- } -->
+<!-- </style> -->
+
+<!-- <div class="title-block-banner"> -->
+<!--     <img class="title-block-image" src="../img/survey.jpg" alt="Image Alt Text"> -->
+<!--     <div class="title-block-text"> -->
+<!--       <h1>Teaching</h1> -->
+<!--     </div> -->
+<!-- </div> -->
+```
+
+I am passionate about teaching and have experience of teaching at University as well as field courses and schools. As a lecturer at Leeds Beckett University and previously as an Associate Lecturer at the University of York I have experience of teaching on a variety of modules that outlined below. Between 2017-2019, I undertook a [Masters level course](https://www.york.ac.uk/staff/teaching/develop/york-learning-teaching-award/) and was awarded Fellowship of the [Higher Education Academy](https://www.advance-he.ac.uk/). I am also a trained Mountain Leader that aids in feild teaching. I continue with my interest in pedagogy and combine different methods in my teaching whether it be in the lecture theater, laboratories or in the field.   
+
+### CURRENT MODULES
+
+- <b>GIS and Remote Sensing</b> (2<sup>nd</sup> year) – module convener.
+- <b>Coastal Environments</b> (3<sup>rd</sup> year) – module convener.
+- <b>Intro to Physical Geography</b> (1<sup>st</sup> year).
+- <b>Academic Skills</b> (1<sup>st</sup> year).
+- <b>International Fieldtrip</b> (2<sup>nd</sup> year).
+- <b>Natural Hazard Management and Climate Change</b> (2<sup>nd</sup> year).
+
+### PREVIOUS MODULES
+
+- <b>Environmental Field Project</b> (2<sup>nd</sup> year) – module convener.
+- <b>Dynamic Earth</b> (1<sup>st</sup> year).
+- <b>Earth, Processes and Landforms</b> (2<sup>nd</sup> year).
+- <b>Palaeoenvironmental Change</b> (MSc).
+- <b>IPCC Science</b> (MSc).
+
+
+
+
+# make card
+
+
+```{=html}
+<div class="card border-primary mb-3" style="max-width: 20rem;">
+<div class="card-header">Header</div>
+<div class="card-body">
+<h4 class="card-title">Primary card title</h4>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+```
+
+```{=html}
+<div class="card border-secondary mb-3" style="max-width: 100%;">
+<div class="card-header" style="background-color: teal;">RISeR</div>
+<div class="card-body">
+<p class="card-text">Global sea-level rise is one of our greatest environmental challenges and is predicted to continue for hundreds of years, even if global greenhouse-gas emissions are stopped immediately. However, the range, rates and responses to sea-level rise beyond 2100 are poorly understood.</p>
+
+<p class="card-text">Sea-level change will not be the same around the world; due to gravitational effects Europe is at far greater risk of sea-level rise should Antarctica melt, than Greenland.  RISeR will tackle this critical question - what is the long-term sea-level rise hazard in Europe due to ice-sheet melt?</p>
+
+<p class="card-text">To understand the hazards of long-term ice sheet melt, the RISeR project, is focusing on the Last Interglacial (c. 125,000 years ago) when polar temperatures were 3-5 C warmer (a pattern similar to that predicted in the coming centuries), and global sea level 6-9 m higher.</p>
+
+<p class="card-text">By collecting Last Interglacial sediments preserved offshore in the North Sea, we will reconstruct the rates of sea-level change experienced in the region during this climatically warm period.  Using this new dataset RISeR will then provide high-end projections of sea-level rise beyond 2100 for northwest Europe, based upon the reconstructed magnitudes and rates of regional Last Interglacial sea-level change.</p>
+
+<p class="card-text"><a href="https://riser.leeds.ac.uk/" target="_blank" rel="noopener">Read more about the project here</a></p>
+</div>
+</div>
+```
+## Project 1
+
+This is some text 
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+<p style="color:red;">This is a paragraph.</p>
+- list 1
+- list 2
+
+
+## Project 2
+
+## Project 3

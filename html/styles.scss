@@ -126,21 +126,28 @@ $btn-code-copy-color-active: $orange !default;
 // Override the default color for .list-group-item
 .list-group-item {
     background-color: $gray-100; /* Replace with your desired color */
-    border: 1px solid $gray-500; /* Replace with your desired border color */
+    border: 1px solid $teal; /* Replace with your desired border color */
     padding: 10px;
     margin-bottom: 10px;
     color: $gray-900; /* Replace with your desired text color */
 
     // Change the background color on hover
     &:hover {
-        color: $black; /* Replace with your desired hover color */
+        background-color: $gray-100; /* Replace with your desired color */
+        color: $gray-900; /* Replace with your desired hover color */
     }
 }
 
 // You can also style the buttons inside .list-group-item
 .list-group-item .btn {
-    background-color: #your-button-color-here; /* Replace with your desired button color */
-    color: #your-button-text-color-here; /* Replace with your desired button text color */
+    border: 1px solid $teal; /* Replace with your desired border color */
+    background-color: $white; /* Replace with your desired button color */
+    color: #red; /* Replace with your desired button text color */
+    
+    &:hover {
+        background-color: $teal; /* Replace with your desired color */
+        color: $white; /* Replace with your desired hover color */
+    }
 }
 
 /* Apply full justification to all paragraphs */
@@ -153,4 +160,16 @@ $btn-code-copy-color-active: $orange !default;
     /* Your custom styles here */
     text-align: justify;
     /* Add more styles as needed */
+}
+
+/* Define a CSS class for styling the title text */
+.title_text {
+    color: $orange; /* Replace 'white' with your desired text color */
+    opacity: 1;
+    background-color: $white; /* Background color */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    height: 100%; /* Make the container take up the full height */
+    font-size: 48px; /* Adjust the font size to your desired value */
 }

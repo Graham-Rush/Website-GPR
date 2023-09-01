@@ -94,10 +94,11 @@ about:
     /* Slideshow container */
     .slideshow-container {
       width: 100%; /* Set the desired width for the container. I need this to match the image ratio, as it does now for image 2 */
-      height: 100px; /* Set the desired height for the container */
+      <!-- height: 100%; /* Set the desired height for the container */ -->
       overflow: hidden; /* Hide any overflowing content */
       position: relative;
       margin: auto;
+      border: 2px solid #068194; /* Add a border around the container */
     }
   
     .image-container img {
@@ -198,14 +199,21 @@ about:
 
 # Welcome
 
-Graham is a lecturer in Physical Geography and Environmental Science at <a href="https://www.leedsbeckett.ac.uk/school-of-built-environment-engineering-and-computing/" target="_blank" rel="noopener">Leeds Beckett University</a>
-He is interested in the Earth System, particularly the interactions between, ice sheets, oceans and climate and specialises in reconstructing sea-level change in order to understand ice sheet histories. Graham has a broad interest across the subject area and continues to work and develop projects to study sea-level change and the use of GIS and remote sensing.
+I am a lecturer in Physical Geography and Environmental Science at <a href="https://www.leedsbeckett.ac.uk/school-of-built-environment-engineering-and-computing/" target="_blank" rel="noopener">Leeds Beckett University</a>
+I am interested in the Earth System, particularly the interactions between, ice sheets, oceans and climate and specialises in reconstructing sea-level change in order to understand ice sheet histories. I have a broad interest across the subject area and continues to work and develop projects to study sea-level change and the use of GIS and remote sensing.
 
-Graham's research primarily focuses on reconstructing sea-level change in order to understand ice-sheet histories and changes to ocean circulation patterns and how these can inform future predictions of environmental change. He combines different types of analysis including fieldwork, laboratory, numerical modelling and spatial analysis in his research and teaching. He has worked at various sites in the UK, as well as places such as the Falkland Islands, Swiss Alps and Antarctica.
+<!-- My research primarily focuses on reconstructing sea-level change in order to understand ice-sheet histories and changes to ocean circulation patterns and how these can inform future predictions of environmental change. He combines different types of analysis including fieldwork, laboratory, numerical modelling and spatial analysis in his research and teaching. I've has worked at various sites in the UK, as well as places such as the Falkland Islands, Swiss Alps and Antarctica. -->
 
-Graham originally left education to become a professional footballer with Cambridge United and then went on to become a plasterer. His work eventually took him to help with the build of Halley VI Research Station in Antarctica. This, along with much travelling, including cycling from Los Angeles to Buenos Aires, fired a curiosity and passion for studying and teaching geography. He then went on to study for a BSc and MSc at the University of Gloucestershire before completing his PhD at the University of York.
+<!-- I originally left education to become a professional footballer with Cambridge United and then went on to become a plasterer. My work eventually took him to help with the build of Halley VI Research Station in Antarctica. This, along with much travelling, including cycling from Los Angeles to Buenos Aires, fired a curiosity and passion for studying and teaching geography. I then went on to study for a BSc and MSc at the University of Gloucestershire before completing my PhD at the University of York. -->
 
-Please feel free to [contact me](mailto:g.rush@leedsbeckett.ac.uk) if you have any questions or would like to discuss potential projects.
+Please [contact me](mailto:g.rush@leedsbeckett.ac.uk) if you have any questions or would like to discuss potential projects.
+
+<!-- ### Research Interests: -->
+<!-- - Earth System Science: sea level, ice sheet, ocean, climate interactions -->
+<!-- - Sea-level change and the contributing components -->
+<!-- - GIS and Remote Sensing -->
+
+<!-- ### Expertise  -->
 
 :::  
 <!-- remove these ::: to put text below image  -->

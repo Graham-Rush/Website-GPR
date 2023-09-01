@@ -6,28 +6,32 @@ website:
   description: "Graham Rush. Lecturer at Leeds Beckett University."   # A brief slogan (optional)
   image: img/my_image.jpg
   
-  favicon: img/survey-icon.png
+  favicon: img/sea-ice.png
   
   reader-mode: true # if you’d like users to be able to hide the side navigation and table of contents and have a more focused reading experience, you can enabled reader-mode. When enabled, a reader-mode toggle will appear on the navbar, if present, or on the sidebar. When pressed, the toggle will ‘roll up’ the sidebar and table of contents.
   
   # start of the navigation bar at the top of the website
   navbar:
-    pinned: true
-    logo: /img/profile.jpg
+    pinned: FALSE
+    # logo: /img/sea-ice.png
     
     # your sub-pages
     left:
-      - text: "Projects"
+      - text: "Research"
         href: projects/index.qmd
       # - text: "Photography"
       #   href: photography/index.qmd
+      - text: "Teaching"
+        href: teaching/index.qmd
       - text: "Publications"
         href: publications/index.qmd
+      - text: "Experience"
+        href: interests/index.qmd
       # - text: "CV"
       #   href: cv/index.qmd
       # - text: "Slideshow"
       #   href: slideshow/index.qmd
-      
+        
     
     # your social media handles
     right:
@@ -55,16 +59,20 @@ website:
     center: |
     right: |
       <span class="faux-block"> Built with [Quarto](https://quarto.org/) and [RStudio](https://posit.co/products/open-source/rstudio/) </span>
-#  sidebar:
-  #   style: "docked" # or "docked", "floating"
-  #   search: false
-  #   contents:
-  #     - section: "Menu"
-  #       contents:
-  #         - text: "Projects"
-  #           href: projects/index.qmd
-  #         - text: "Publications"
-  #           href: publications/index.qmd
+  sidebar:
+    style: "docked" # or "docked", "floating"
+    search: false
+    contents:
+      - section: "Menu"
+        contents:
+          - text: "Research"
+            href: projects/index.qmd
+          - text: "Teaching"
+            href: teaching/index.qmd
+          - text: "Publications"
+            href: publications/index.qmd
+          - text: "Experience"
+            href: interests/index.qmd
           # - text: "Slideshow"
           #   href: slideshow/index.qmd
   # add page navigation
