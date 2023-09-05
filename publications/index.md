@@ -179,6 +179,8 @@ keep-md: true
 
 
 
+<div class="h1" style="background-color: #068194; color: white; text-align: center; margin-top: 0; ">PUBLICATIONS</div>
+
 <!-- Start of the code to read and write publication list -->
 
 ::: {.cell}
@@ -186,17 +188,51 @@ keep-md: true
 :::
 
 
-# Publications
+<!-- # Publications -->
 
-## Published articles
+## Published work
+
+### Scientific journal articles
 
 
-###  2021 
-<li class='list-group-item'><strong>G. Rush</strong>, P. McDarby, R. Edwards, Y. Milker, E. Garrett  and  W. R. Gehrels (2021) <i>"Development of an intertidal foraminifera training set for the North Sea and an assessment of its application for Holocene sea-level reconstructions".</i> Marine Micropaleontology<br><a class='btn btn-outline-dark btn-sm' href='https://www.sciencedirect.com/science/article/abs/pii/S0377839821000967' target='_blank' rel='noopener noreferrer'><i class='ai ai-archive' role='img' aria-label='Access the orignal article'></i>Access the orignal article</a></li>
-<li class='list-group-item'>T. Frederikse, S. Adhikari, T. J. Daley, S. Dangendorf, R. Gehrels, F. Landerer, M. Marcos, T. L. Newton, <strong>G. Rush</strong>, A. B. Slangen  and  others (2021) <i>"Constraining 20th-century sea-level rise in the South Atlantic Ocean".</i> Journal of Geophysical Research and Oceans<br><a class='btn btn-outline-dark btn-sm' href='https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016970' target='_blank' rel='noopener noreferrer'><i class='ai ai-archive' role='img' aria-label='Access the orignal article'></i>Access the orignal article</a></li>###  2020 
-<li class='list-group-item'>D. Mauquoy, R. J. Payne, K. V. Babeshko, R. Bartlett, I. Boomer, H. Bowey, C. D. Evans, F. Ring-Hrubesh, D. Muirhead, M. O’Callaghan  and  <strong>G. Rush</strong> (2020) <i>"Falkland Island peatland development processes and the pervasive presence of fire".</i> Quaternary Science Reviews<br><a class='btn btn-outline-dark btn-sm' href='https://www.sciencedirect.com/science/article/abs/pii/S027737912030353X' target='_blank' rel='noopener noreferrer'><i class='ai ai-archive' role='img' aria-label='Access the orignal article'></i>Access the orignal article</a></li>###  2019 
-<li class='list-group-item'>R. J. Payne, F. Ring-Hrubesh, <strong>G. Rush</strong>, T. J. Sloan, C. D. Evans  and  D. Mauquoy (2019) <i>"Peatland initiation and carbon accumulation in the Falkland Islands".</i> Quaternary Science Reviews<br><a class='btn btn-outline-dark btn-sm' href='https://www.sciencedirect.com/science/article/abs/pii/S027737911930068X' target='_blank' rel='noopener noreferrer'><i class='ai ai-archive' role='img' aria-label='Access the orignal article'></i>Access the orignal article</a></li>###  2018 
-<li class='list-group-item'><strong>G. Rush</strong>, L. E. Clarke, M. Stone  and  M. J. Wood (2018) <i>"Can drones count gulls? Minimal disturbance and semiautomated image processing with an unmanned aerial vehicle for colony-nesting seabirds".</i> Ecology and evolution<br><a class='btn btn-outline-dark btn-sm' href='https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4495' target='_blank' rel='noopener noreferrer'><i class='ai ai-archive' role='img' aria-label='Access the orignal article'></i>Access the orignal article</a></li>
+###  2023 
+<li class='list-group-item'>J. Hill, <strong>G. Rush</strong>, J. Peakall, M. Johnson, L. Hodson, N. L. Barlow, E. T. Bowman, W. R. Gehrels, D. M. Hodgson  and  G. Kesserwani (2023) "Resolving tsunami wave dynamics: integrating sedimentology and numerical modelling." <i>The Depositional Record.</i><br><a class='btn btn-outline-dark btn-sm' href='https://onlinelibrary.wiley.com/doi/abs/10.1002/dep2.247' target='_blank' rel='noopener noreferrer'><i class='ai ai-archive' role='img' aria-label='Access the orignal article'></i>Access the orignal article</a></li>###  2021 
+<li class='list-group-item'><strong>G. Rush</strong>, P. McDarby, R. Edwards, Y. Milker, E. Garrett  and  W. R. Gehrels (2021) "Development of an intertidal foraminifera training set for the North Sea and an assessment of its application for Holocene sea-level reconstructions." <i>Marine Micropaleontology.</i><br><a class='btn btn-outline-dark btn-sm' href='https://www.sciencedirect.com/science/article/abs/pii/S0377839821000967' target='_blank' rel='noopener noreferrer'><i class='ai ai-archive' role='img' aria-label='Access the orignal article'></i>Access the orignal article</a></li>
+<li class='list-group-item'>T. Frederikse, S. Adhikari, T. J. Daley, S. Dangendorf, R. Gehrels, F. Landerer, M. Marcos, T. L. Newton, <strong>G. Rush</strong>, A. B. Slangen  and  others (2021) "Constraining 20th-century sea-level rise in the South Atlantic Ocean." <i>Journal of Geophysical Research and Oceans.</i><br><a class='btn btn-outline-dark btn-sm' href='https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016970' target='_blank' rel='noopener noreferrer'><i class='ai ai-archive' role='img' aria-label='Access the orignal article'></i>Access the orignal article</a></li>###  2020 
+<li class='list-group-item'>D. Mauquoy, R. J. Payne, K. V. Babeshko, R. Bartlett, I. Boomer, H. Bowey, C. D. Evans, F. Ring-Hrubesh, D. Muirhead, M. O’Callaghan  and  <strong>G. Rush</strong> (2020) "Falkland Island peatland development processes and the pervasive presence of fire." <i>Quaternary Science Reviews.</i><br><a class='btn btn-outline-dark btn-sm' href='https://www.sciencedirect.com/science/article/abs/pii/S027737912030353X' target='_blank' rel='noopener noreferrer'><i class='ai ai-archive' role='img' aria-label='Access the orignal article'></i>Access the orignal article</a></li>###  2019 
+<li class='list-group-item'>R. J. Payne, F. Ring-Hrubesh, <strong>G. Rush</strong>, T. J. Sloan, C. D. Evans  and  D. Mauquoy (2019) "Peatland initiation and carbon accumulation in the Falkland Islands." <i>Quaternary Science Reviews.</i><br><a class='btn btn-outline-dark btn-sm' href='https://www.sciencedirect.com/science/article/abs/pii/S027737911930068X' target='_blank' rel='noopener noreferrer'><i class='ai ai-archive' role='img' aria-label='Access the orignal article'></i>Access the orignal article</a></li>###  2018 
+<li class='list-group-item'><strong>G. Rush</strong>, L. E. Clarke, M. Stone  and  M. J. Wood (2018) "Can drones count gulls? Minimal disturbance and semiautomated image processing with an unmanned aerial vehicle for colony-nesting seabirds." <i>Ecology and evolution.</i><br><a class='btn btn-outline-dark btn-sm' href='https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4495' target='_blank' rel='noopener noreferrer'><i class='ai ai-archive' role='img' aria-label='Access the orignal article'></i>Access the orignal article</a></li>
+
+
+<!-- ### Book chapters -->
+
+<!-- ```{r} -->
+<!-- #| label: "book-published-year" -->
+<!-- #| id: "book-published-year" -->
+<!-- #| output: asis -->
+<!-- years <- names(pub_strs[["books"]]) -->
+<!-- # for (year in rev(years)) { -->
+<!-- for (year in years) { -->
+<!--   cat("### ", year, "\n") -->
+<!-- cat(paste( -->
+<!--   # "<ul class='list-group list-group-flush'>\n", -->
+<!--   # sapply(years, function(year) { -->
+<!--     paste(pub_strs[["books"]][[as.character(year)]], collapse = "\n") -->
+<!--   # }), -->
+<!--   # "</ul>\n", -->
+<!--   # sep = "" -->
+<!-- )) -->
+<!-- } -->
+<!-- ``` -->
+
+<hr style="color: #000; background-color: #000; height: 2px; border: none;">
+
+## Work not yet published
+
+
+###  2023 
+<ul class='list-group list-group-flush'>
+<li class='list-group-item'>N. L. M. Barlow and <strong>G. Rush</strong> (2023) "Late Quaternary relative sea-level changes at mid-latitudes," in <i>Encyclopedia of Quaternary Science.</i> Elsevier.<br></li></ul>
 
 
 <!-- This si some text -->
@@ -205,8 +241,3 @@ keep-md: true
 <!-- cat(paste("this is some more text")) -->
 <!-- ``` -->
 
-## Working Papers / Non-archival
-
-
-<ul class='list-group list-group-flush'>
-</ul>

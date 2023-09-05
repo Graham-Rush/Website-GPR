@@ -177,6 +177,8 @@ keep-md: true
   </script>
 ```
 
+<div class="h1" style="background-color: #068194; color: white; text-align: center; margin-top: 0; ">PUBLICATIONS</div>
+
 <!-- Start of the code to read and write publication list -->
 ```{r}
 read_yaml <- function(file) {
@@ -204,7 +206,7 @@ button <- function(url, str, icon) {
 }
 
 yaml_data <- read_yaml("pubs.yaml")
-pub_strs <- list(pubs = list(), wps = list())
+pub_strs <- list(pubs = list(), books = list(), wps = list())
 
 for (key in names(yaml_data)) {
   data <- yaml_data[[key]]
@@ -255,17 +257,23 @@ for (key in names(yaml_data)) {
   pub_url <- data[["published_url"]]
   venue <- data[["venue"]]
   working_paper <- is.null(pub_url)
+  book_str <- data[["book"]]
+  publisher_str <- data[["publisher"]]
   
   pub_str <- paste(
     # author_str, " (", year_str, ") /"", title_str, "/".", sep = ""
-    author_str, " (", year_str, ") <i>\"", title_str, "\".</i>", " ", journal_str, sep = ""
+    author_str, " (", year_str, ") \"", title_str, ".\"", " <i>", journal_str, ".</i>", sep = ""
   )
   
   if (!is.null(venue)) {
     pub_str <- paste(pub_str, " <em>", venue, "</em>", sep = "")
   }
   
-  if (working_paper) {
+  if (!is.null(book_str)) {
+    pub_str <- paste(author_str, " (", year_str, ") \"", title_str, ",\"", " in <i>", book_str, ".</i> ", publisher_str, ".", sep = "")
+  }
+  
+  if (working_paper) { # add the reference to the relevant list 
     if (!year_str %in% names(pub_strs[["wps"]])) {
       pub_strs[["wps"]][[as.character(year_str)]] <- character(0)
     }
@@ -275,7 +283,8 @@ for (key in names(yaml_data)) {
             paste(buttons, collapse = " "), "</li>", sep = "")
     )
   } else {
-    if (!year_str %in% names(pub_strs[["pubs"]])) {
+    if ((!is.null(journal_str))) {
+      if (!year_str %in% names(pub_strs[["pubs"]])) {
       pub_strs[["pubs"]][[as.character(year_str)]] <- character(0)
     }
     buttons <- c(buttons, button(pub_url, "Access the orignal article", "ai-archive"))
@@ -284,13 +293,26 @@ for (key in names(yaml_data)) {
       paste("<li class='list-group-item'>", pub_str, "<br>",
             paste(buttons, collapse = " "), "</li>", sep = "")
     )
+    } else {
+    if (!year_str %in% names(pub_strs[["books"]])) {
+      pub_strs[["books"]][[as.character(year_str)]] <- character(0)
+    }
+    buttons <- c(buttons, button(pub_url, "Access the orignal article", "ai-archive"))
+    pub_strs[["books"]][[as.character(year_str)]] <- c(
+      pub_strs[["books"]][[as.character(year_str)]],
+      paste("<li class='list-group-item'>", pub_str, "<br>",
+            paste(buttons, collapse = " "), "</li>", sep = "")
+    )
+    }
   }
 }
 ```
 
-# Publications
+<!-- # Publications -->
 
-## Published articles
+## Published work
+
+### Scientific journal articles
 
 ```{r}
 #| label: "published-year"
@@ -311,13 +333,30 @@ cat(paste(
 }
 ```
 
-<!-- This si some text -->
+<!-- ### Book chapters -->
 
 <!-- ```{r} -->
-<!-- cat(paste("this is some more text")) -->
+<!-- #| label: "book-published-year" -->
+<!-- #| id: "book-published-year" -->
+<!-- #| output: asis -->
+<!-- years <- names(pub_strs[["books"]]) -->
+<!-- # for (year in rev(years)) { -->
+<!-- for (year in years) { -->
+<!--   cat("### ", year, "\n") -->
+<!-- cat(paste( -->
+<!--   # "<ul class='list-group list-group-flush'>\n", -->
+<!--   # sapply(years, function(year) { -->
+<!--     paste(pub_strs[["books"]][[as.character(year)]], collapse = "\n") -->
+<!--   # }), -->
+<!--   # "</ul>\n", -->
+<!--   # sep = "" -->
+<!-- )) -->
+<!-- } -->
 <!-- ``` -->
 
-## Working Papers / Non-archival
+<hr style="color: #000; background-color: #000; height: 2px; border: none;">
+
+## Work not yet published
 
 ```{r}
 #| label: "not-published-year"
@@ -325,7 +364,7 @@ cat(paste(
 #| output: asis
 years <- names(pub_strs[["wps"]])
 for (year in rev(years)) {
-  cat("### ", year, " {#", "not-published-", year, "}\n")
+  cat("### ", year, "\n")
 }
 cat(paste(
   "<ul class='list-group list-group-flush'>\n",
@@ -336,4 +375,10 @@ cat(paste(
   sep = ""
 ))
 ```
+
+<!-- This si some text -->
+
+<!-- ```{r} -->
+<!-- cat(paste("this is some more text")) -->
+<!-- ``` -->
 
