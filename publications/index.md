@@ -179,7 +179,7 @@ keep-md: true
 
 
 
-<div class="h1" style="background-color: #068194; color: white; text-align: center; margin-top: 0; ">PUBLICATIONS</div>
+<div class="h1" style="background-color: #068194; color: white; text-align: center; margin-top: 0; ">Publications</div>
 
 <!-- Start of the code to read and write publication list -->
 

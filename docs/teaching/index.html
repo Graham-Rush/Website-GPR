@@ -72,6 +72,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/sea-ice.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Graham Rush</span>
     </a>
@@ -175,17 +178,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#teaching" id="toc-teaching" class="nav-link active" data-scroll-target="#teaching">Teaching</a>
-  <ul class="collapse">
-  <li><a href="#current-modules" id="toc-current-modules" class="nav-link" data-scroll-target="#current-modules">CURRENT MODULES</a></li>
-  <li><a href="#previous-modules" id="toc-previous-modules" class="nav-link" data-scroll-target="#previous-modules">PREVIOUS MODULES</a></li>
-  </ul></li>
-  <li><a href="#make-card" id="toc-make-card" class="nav-link" data-scroll-target="#make-card">make card</a>
-  <ul class="collapse">
-  <li><a href="#project-1" id="toc-project-1" class="nav-link" data-scroll-target="#project-1">Project 1</a></li>
-  <li><a href="#project-2" id="toc-project-2" class="nav-link" data-scroll-target="#project-2">Project 2</a></li>
-  <li><a href="#project-3" id="toc-project-3" class="nav-link" data-scroll-target="#project-3">Project 3</a></li>
-  </ul></li>
+  <li><a href="#current-modules" id="toc-current-modules" class="nav-link active" data-scroll-target="#current-modules">Current modules</a></li>
+  <li><a href="#previous-modules" id="toc-previous-modules" class="nav-link" data-scroll-target="#previous-modules">Previous modules</a></li>
   </ul>
 </nav>
     </div>
@@ -194,118 +188,183 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<!-- create a banner with images that scroll. You need to edit the text (at the bottom of the JS) and images (in the html) and length of animation in line 93 -->
-<!-- Slideshow container for the title block banner -->
-<div class="title-block-banner-slideshow">
-    <!-- First slide -->
-    <div class="mySlides fade">
-        <img src="../img/paper.jpg" style="width:100%">
-        <div class="text-overlay">
-            <h1 class="title_text">{{page_title}}</h1>
-        </div>
-    </div>
+<!-- Slideshow container -->
+<div class="slideshow-container">
 
-    <!-- Second slide -->
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">2 / 3</div> -->
+  <img src="../img/lecture2.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">3 / 3</div> -->
+  <img src="../img/8map.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+      <div class="mySlides fade">
+  <!-- <div class="numbertext">7 / 3</div> -->
+  <img src="../img/lecture1.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
     <div class="mySlides fade">
-        <img src="../img/lecture1.jpg" style="width:100%">
-        <div class="text-overlay">
-            <h1 class="title_text">{{page_title}}</h1>
-        </div>
-    </div>
-    
-    <!-- Second slide -->
+  <!-- <div class="numbertext">4 / 3</div> -->
+  <img src="../img/plane.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
     <div class="mySlides fade">
-        <img src="../img/lecture2.jpg" style="width:100%">
-        <div class="text-overlay">
-            <h1 class="title_text">{{page_title}}</h1>
-        </div>
-    </div>
-
-    <!-- Add more slides as needed -->
-</div>
-
-<style>
+  <!-- <div class="numbertext">5 / 3</div> -->
+  <img src="../img/paper.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+    <div class="mySlides fade">
+  <!-- <div class="numbertext">6 / 3</div> -->
+  <img src="../img/survey.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+    <div class="mySlides fade">
+  <!-- <div class="numbertext">8 / 3</div> -->
+  <img src="../img/sun.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">9 / 3</div> -->
+  <img src="../img/os1.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <div class="mySlides fade">
+  <!-- <div class="numbertext">1 / 3</div> -->
+  <img src="../img/ythan-marsh1.jpg" style="width:100%">
+  <div class="text"></div>
+  </div>
+  
+  <!-- Next and previous buttons -->
+  <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
+  <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+  </div>
+  
+  <!-- ... Rest of your header content ... -->
+  
+  <style>
     /* Your CSS styles for the slideshow go here */
     /* Slideshow container */
-    .title-block-banner-slideshow {
-        width: 100%; /* Set the desired width for the container */
-        overflow: hidden; /* Hide any overflowing content */
-        position: relative;
-        margin: auto;
-        border: 2px solid #068194; /* Add a border around the container */
-   }
-
+    .slideshow-container {
+      width: 100%; /* Set the desired width for the container. I need this to match the image ratio, as it does now for image 2 */
+      <!-- height: 100px; /* Set the desired height for the container */ -->
+      overflow: hidden; /* Hide any overflowing content */
+      position: relative;
+      margin: auto;
+      border: 2px solid #068194; /* Add a border around the container */
+    }
+  
+    .image-container img {
+    width: 100%; /* Take up the full width of the container */
+      height: 100%; /* Take up the full height of the container */
+      object-fit: cover; /* Maintain aspect ratio and cover entire container */
+      display: block; /* Remove any extra spacing caused by inline display */
+  }
+  
     /* Hide the images by default */
     .mySlides {
-        display: none;
+      display: none;
     }
-
+  
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;    
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+  
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+        font-size: 48px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Text overlay */
+    .text-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: red; /* Text color */
+        z-index: 1; /* Place the text above the image */
+    }
+  
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+        font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+  
     /* Fading animation */
     .fade {
-        animation-name: fade;
-        animation-duration: 10s; /* Adjust the duration as needed */
+      animation-name: fade;
+      animation-duration: 30s;
     }
-
+    
     @keyframes fade {
-        from { opacity: 1 }
-        to { opacity: 1 }
+      from {opacity: .8}
+      to {opacity: 1}
     }
-
-    /* Text overlay styles */
-    .text-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        # color: red; /* Text color */
-        /* background-color: rgba(0, 0, 0, 0.5); Background color with transparency */
-    }
-</style>
-
-<script>
+  </style>
+  
+  <script>
     // Your JavaScript code for the slideshow goes here
     let slideIndex = 0;
     showSlides();
-
+    
     function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 10000); // Change image every 5 seconds (adjust as needed)
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
     }
-    
-    // Define your page titles (customize as needed)
-    const pageTitles = ['Teaching', 'Example Page 1', 'Another Page', 'Page 4'];
-    
-    // Function to replace placeholders with the provided title
-    function renderPageWithTitle(title) {
-        // Replace the {{page_title}} placeholder with the actual title
-        document.querySelectorAll('.title_text').forEach((element) => {
-            element.textContent = title;
-        });
-    }
-    
-    // Call the function with a specific title (e.g., 'Teaching')
-    renderPageWithTitle(pageTitles[0]);    
-</script>
-<section id="teaching" class="level1">
-<h1>Teaching</h1>
+  </script>
+<div class="h1" style="background-color: #068194; color: white; text-align: center; margin-top: 0; ">
+Teaching
+</div>
 <!-- create a banner with images that are static. You need to edit the text and images manually-->
 <!-- <!-- HTML and CSS code for the title block banner with a static image -->
 <!-- <style> -->
 <!-- /* Add CSS styling to your title block banner */ -->
 <!-- .title-block-banner { -->
-<!--     background-color: #EE6A24; -->
+<!--     background-color: #068194; -->
 <!--     color: white; -->
 <!--     padding: 20px; -->
 <!--     text-align: center; -->
@@ -336,8 +395,8 @@ ul.task-list li input[type="checkbox"] {
 <!--     </div> -->
 <!-- </div> -->
 <p>I am passionate about teaching and have experience of teaching at University as well as field courses and schools. As a lecturer at Leeds Beckett University and previously as an Associate Lecturer at the University of York I have experience of teaching on a variety of modules that outlined below. Between 2017-2019, I undertook a <a href="https://www.york.ac.uk/staff/teaching/develop/york-learning-teaching-award/">Masters level course</a> and was awarded Fellowship of the <a href="https://www.advance-he.ac.uk/">Higher Education Academy</a>. I am also a trained Mountain Leader that aids in feild teaching. I continue with my interest in pedagogy and combine different methods in my teaching whether it be in the lecture theater, laboratories or in the field.</p>
-<section id="current-modules" class="level3">
-<h3 class="anchored" data-anchor-id="current-modules">CURRENT MODULES</h3>
+<section id="current-modules" class="level2">
+<h2 class="anchored" data-anchor-id="current-modules">Current modules</h2>
 <ul>
 <li><b>GIS and Remote Sensing</b> (2<sup>nd</sup> year) – module convener.</li>
 <li><b>Coastal Environments</b> (3<sup>rd</sup> year) – module convener.</li>
@@ -347,8 +406,8 @@ ul.task-list li input[type="checkbox"] {
 <li><b>Natural Hazard Management and Climate Change</b> (2<sup>nd</sup> year).</li>
 </ul>
 </section>
-<section id="previous-modules" class="level3">
-<h3 class="anchored" data-anchor-id="previous-modules">PREVIOUS MODULES</h3>
+<section id="previous-modules" class="level2">
+<h2 class="anchored" data-anchor-id="previous-modules">Previous modules</h2>
 <ul>
 <li><b>Environmental Field Project</b> (2<sup>nd</sup> year) – module convener.</li>
 <li><b>Dynamic Earth</b> (1<sup>st</sup> year).</li>
@@ -356,56 +415,39 @@ ul.task-list li input[type="checkbox"] {
 <li><b>Palaeoenvironmental Change</b> (MSc).</li>
 <li><b>IPCC Science</b> (MSc).</li>
 </ul>
-</section>
-</section>
-<section id="make-card" class="level1">
-<h1>make card</h1>
-<div class="card border-primary mb-3" style="max-width: 20rem;">
-<div class="card-header">Header</div>
-<div class="card-body">
-<h4 class="card-title anchored">Primary card title</h4>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-</div>
-</div>
-<div class="card border-secondary mb-3" style="max-width: 100%;">
-<div class="card-header" style="background-color: teal;">RISeR</div>
-<div class="card-body">
-<p class="card-text">Global sea-level rise is one of our greatest environmental challenges and is predicted to continue for hundreds of years, even if global greenhouse-gas emissions are stopped immediately. However, the range, rates and responses to sea-level rise beyond 2100 are poorly understood.</p>
-
-<p class="card-text">Sea-level change will not be the same around the world; due to gravitational effects Europe is at far greater risk of sea-level rise should Antarctica melt, than Greenland.  RISeR will tackle this critical question - what is the long-term sea-level rise hazard in Europe due to ice-sheet melt?</p>
-
-<p class="card-text">To understand the hazards of long-term ice sheet melt, the RISeR project, is focusing on the Last Interglacial (c. 125,000 years ago) when polar temperatures were 3-5 C warmer (a pattern similar to that predicted in the coming centuries), and global sea level 6-9 m higher.</p>
-
-<p class="card-text">By collecting Last Interglacial sediments preserved offshore in the North Sea, we will reconstruct the rates of sea-level change experienced in the region during this climatically warm period.  Using this new dataset RISeR will then provide high-end projections of sea-level rise beyond 2100 for northwest Europe, based upon the reconstructed magnitudes and rates of regional Last Interglacial sea-level change.</p>
-
-<p class="card-text"><a href="https://riser.leeds.ac.uk/" target="_blank" rel="noopener">Read more about the project here</a></p>
-</div>
-</div>
-<section id="project-1" class="level2">
-<h2 class="anchored" data-anchor-id="project-1">Project 1</h2>
-<p>This is some text</p>
-<h1>
-This is a heading
-</h1>
-<p>
-This is a paragraph.
-</p>
-<p style="color:red;">
-This is a paragraph.
-</p>
-<ul>
-<li>list 1</li>
-<li>list 2</li>
-</ul>
-</section>
-<section id="project-2" class="level2">
-<h2 class="anchored" data-anchor-id="project-2">Project 2</h2>
-</section>
-<section id="project-3" class="level2">
-<h2 class="anchored" data-anchor-id="project-3">Project 3</h2>
+<!-- # make card -->
+<!-- ```{=html} -->
+<!-- <div class="card border-primary mb-3" style="max-width: 20rem;"> -->
+<!-- <div class="card-header">Header</div> -->
+<!-- <div class="card-body"> -->
+<!-- <h4 class="card-title">Primary card title</h4> -->
+<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- ``` -->
+<!-- ```{=html} -->
+<!-- <div class="card border-secondary mb-3" style="max-width: 100%;"> -->
+<!-- <div class="card-header" style="background-color: #068194; color: white">RISeR</div> -->
+<!-- <div class="card-body"> -->
+<!-- <p class="card-text">Global sea-level rise is one of our greatest environmental challenges and is predicted to continue for hundreds of years, even if global greenhouse-gas emissions are stopped immediately. However, the range, rates and responses to sea-level rise beyond 2100 are poorly understood.</p> -->
+<!-- <p class="card-text">Sea-level change will not be the same around the world; due to gravitational effects Europe is at far greater risk of sea-level rise should Antarctica melt, than Greenland.  RISeR will tackle this critical question - what is the long-term sea-level rise hazard in Europe due to ice-sheet melt?</p> -->
+<!-- <p class="card-text">To understand the hazards of long-term ice sheet melt, the RISeR project, is focusing on the Last Interglacial (c. 125,000 years ago) when polar temperatures were 3-5 C warmer (a pattern similar to that predicted in the coming centuries), and global sea level 6-9 m higher.</p> -->
+<!-- <p class="card-text">By collecting Last Interglacial sediments preserved offshore in the North Sea, we will reconstruct the rates of sea-level change experienced in the region during this climatically warm period.  Using this new dataset RISeR will then provide high-end projections of sea-level rise beyond 2100 for northwest Europe, based upon the reconstructed magnitudes and rates of regional Last Interglacial sea-level change.</p> -->
+<!-- <p class="card-text"><a href="https://riser.leeds.ac.uk/" target="_blank" rel="noopener">Read more about the project here</a></p> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- ``` -->
+<!-- ## Project 1 -->
+<!-- This is some text  -->
+<!-- <h1>This is a heading</h1> -->
+<!-- <p>This is a paragraph.</p> -->
+<!-- <p style="color:red;">This is a paragraph.</p> -->
+<!-- - list 1 -->
+<!-- - list 2 -->
+<!-- ## Project 2 -->
+<!-- ## Project 3 -->
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

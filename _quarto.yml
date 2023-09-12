@@ -13,7 +13,7 @@ website:
   # start of the navigation bar at the top of the website
   navbar:
     pinned: FALSE
-    # logo: /img/sea-ice.png
+    logo: /img/sea-ice.png
     
     # your sub-pages
     left:
