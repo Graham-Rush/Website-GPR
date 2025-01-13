@@ -175,7 +175,7 @@ title: ""
 
 <div class="h1" style="background-color: #068194; color: white; text-align: center; margin-top: 0; ">Research</div>
 
-My research primarily focuses on reconstructing sea-level change in order to understand ice-sheet histories and changes to ocean circulation patterns and how these can inform future predictions of environmental change. I combine different types of analysis including fieldwork, laboratory, numerical modelling and spatial analysis in his research and teaching. I've has worked at various sites in the UK, as well as places such as the Falkland Islands, Swiss Alps and Antarctica.
+My research primarily focuses on reconstructing sea-level change in order to understand ice-sheet histories and changes to ocean circulation patterns and how these can inform future predictions of environmental change. I combine different types of analysis including fieldwork, laboratory, numerical modelling and spatial analysis in his research and teaching. I have worked at various sites in the UK, as well as places such as the Falkland Islands, Swiss Alps and Antarctica.
 
 ## Current and past research projects 
 

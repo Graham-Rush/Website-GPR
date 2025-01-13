@@ -177,7 +177,9 @@ keep-md: true
   </script>
 ```
 
-<div class="h1" style="background-color: #068194; color: white; text-align: center; margin-top: 0; ">Publications</div>
+<div class="h1" style="background-color: #e41a1c; color: white; text-align: center; margin-top: 0; ">Publications</div>
+
+<!-- #068194 -->
 
 <!-- Start of the code to read and write publication list -->
 ```{r}
@@ -333,48 +335,48 @@ cat(paste(
 }
 ```
 
-<!-- ### Book chapters -->
+### Book chapters
 
-<!-- ```{r} -->
-<!-- #| label: "book-published-year" -->
-<!-- #| id: "book-published-year" -->
-<!-- #| output: asis -->
-<!-- years <- names(pub_strs[["books"]]) -->
-<!-- # for (year in rev(years)) { -->
-<!-- for (year in years) { -->
-<!--   cat("### ", year, "\n") -->
-<!-- cat(paste( -->
-<!--   # "<ul class='list-group list-group-flush'>\n", -->
-<!--   # sapply(years, function(year) { -->
-<!--     paste(pub_strs[["books"]][[as.character(year)]], collapse = "\n") -->
-<!--   # }), -->
-<!--   # "</ul>\n", -->
-<!--   # sep = "" -->
-<!-- )) -->
-<!-- } -->
-<!-- ``` -->
+```{r}
+#| label: "book-published-year"
+#| id: "book-published-year"
+#| output: asis
+years <- names(pub_strs[["books"]])
+# for (year in rev(years)) {
+for (year in years) {
+  cat("### ", year, "\n")
+cat(paste(
+  # "<ul class='list-group list-group-flush'>\n",
+  # sapply(years, function(year) {
+    paste(pub_strs[["books"]][[as.character(year)]], collapse = "\n")
+  # }),
+  # "</ul>\n",
+  # sep = ""
+))
+}
+```
 
 <hr style="color: #000; background-color: #000; height: 2px; border: none;">
 
-## Work not yet published
+<!-- ## Work not yet published -->
 
-```{r}
-#| label: "not-published-year"
-#| id: "not-published-year"
-#| output: asis
-years <- names(pub_strs[["wps"]])
-for (year in rev(years)) {
-  cat("### ", year, "\n")
-}
-cat(paste(
-  "<ul class='list-group list-group-flush'>\n",
-  sapply(years, function(year) {
-    paste(pub_strs[["wps"]][[year]], collapse = "\n")
-  }),
-  "</ul>\n",
-  sep = ""
-))
-```
+<!-- ```{r} -->
+<!-- #| label: "not-published-year" -->
+<!-- #| id: "not-published-year" -->
+<!-- #| output: asis -->
+<!-- years <- names(pub_strs[["wps"]]) -->
+<!-- for (year in rev(years)) { -->
+<!--   cat("### ", year, "\n") -->
+<!-- } -->
+<!-- cat(paste( -->
+<!--   "<ul class='list-group list-group-flush'>\n", -->
+<!--   sapply(years, function(year) { -->
+<!--     paste(pub_strs[["wps"]][[year]], collapse = "\n") -->
+<!--   }), -->
+<!--   "</ul>\n", -->
+<!--   sep = "" -->
+<!-- )) -->
+<!-- ``` -->
 
 <!-- This si some text -->
 

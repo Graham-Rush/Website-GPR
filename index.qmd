@@ -208,6 +208,7 @@ I am interested in the Earth System, particularly the interactions between, ice 
 
 Please [contact me](mailto:g.rush@leedsbeckett.ac.uk) if you have any questions or would like to discuss potential projects.
 
+![Second Image](img/LeedsBeckett_PrimaryLogo_Purple_rgb.png){ width=200px style="border-radius: 0%;" }
 <!-- ### Research Interests: -->
 <!-- - Earth System Science: sea level, ice sheet, ocean, climate interactions -->
 <!-- - Sea-level change and the contributing components -->
