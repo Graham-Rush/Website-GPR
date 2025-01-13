@@ -261,6 +261,7 @@ for (key in names(yaml_data)) {
   working_paper <- is.null(pub_url)
   book_str <- data[["book"]]
   publisher_str <- data[["publisher"]]
+  editors <- data[["editor"]]
   
   pub_str <- paste(
     # author_str, " (", year_str, ") /"", title_str, "/".", sep = ""
@@ -272,8 +273,40 @@ for (key in names(yaml_data)) {
   }
   
   if (!is.null(book_str)) {
-    pub_str <- paste(author_str, " (", year_str, ") \"", title_str, ",\"", " in <i>", book_str, ".</i> ", publisher_str, ".", sep = "")
+    if (!is.null(editors)) { 
+    # my script to change authors names
+    editors_new <- character(0)
+    for (i in 1:length(editors)) {
+      auth <- editor_str[i]
+      # Remove leading and trailing spaces and split by commas
+      parts <- unlist(strsplit(trimws(auth), ","))
+      if (length(parts) > 1) {
+      # Rearrange the parts and create initials
+      names <- strsplit(trimws(parts[2:length(parts)]), " ")
+      names <- unlist (names)
+      initials <- paste0(substr(names, 1, 1), ".")
+      new_string <- paste(unlist(list(c(initials))), collapse = " ")
+      rearranged_string <- paste(new_string, parts[1], sep = " ")
+      # cat(rearranged_string, "\n")
+      editors_new[i] <- rearranged_string
+      } else {
+        editors_new[i] <- auth
+      }
+    }
+    editors <- editors_new
+    
+    if (is.null(editors)) {
+    editors <- c("me")
+    }
+    editors <- ifelse(editors != "me", editors, "<strong>G. Rush</strong>")
+    editors_str <- readable_list(editors)
+    
+    pub_str <- paste(author_str, " (", year_str, ") \"", title_str, ",\"", " in <i>", book_str, ", edited by ", editors_str, ", ", publisher_str, ".</i>", sep = "")
+    } else {
+      pub_str <- paste(author_str, " (", year_str, ") \"", title_str, ",\"", " in <i>", book_str, ".</i> ", publisher_str, ".", sep = "")
+    }
   }
+  
   
   if (working_paper) { # add the reference to the relevant list 
     if (!year_str %in% names(pub_strs[["wps"]])) {
