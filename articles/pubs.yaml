@@ -1,0 +1,113 @@
+hill2023tsunami:
+  title: "Resolving tsunami wave dynamics: integrating sedimentology and numerical modelling"
+  authors: 
+        - Hill, Jon
+        - me
+        - Peakall, Jeff
+        - Johnson, Michael
+        - Hodson, Luke
+        - Barlow, Natasha LM
+        - Bowman, Elisabeth T
+        - Gehrels, W Roland 
+        - Hodgson, David M
+        - Kesserwani, Georges
+  journal: The Depositional Record
+  year: 2023
+  publisher: Wiley Online Library
+  published_url: https://onlinelibrary.wiley.com/doi/abs/10.1002/dep2.247
+rush2021development:
+  title: "Development of an intertidal foraminifera training set for the North Sea and an assessment of its application for Holocene sea-level reconstructions"
+  authors: 
+        - me
+        - McDarby, Patrick
+        - Edwards, Robin
+        - Milker, Yvonne
+        - Garrett, Ed
+        - Gehrels, W Roland
+  journal: Marine Micropaleontology
+  volume: 169
+  pages: 102055
+  year: 2021
+  publisher: Elsevier
+  published_url: https://www.sciencedirect.com/science/article/abs/pii/S0377839821000967
+frederikse2021constraining:
+  title: "Constraining 20th-century sea-level rise in the South Atlantic Ocean"
+  authors: 
+        - Frederikse, Thomas
+        - Adhikari, Surendra
+        - Daley, Tim J
+        - Dangendorf, S{\"onke
+        - Gehrels, Roland
+        - Landerer, Felix
+        - Marcos, Marta
+        - Newton, Thomas L
+        - me
+        - Slangen, Aimee BA
+        - others
+  journal: Journal of Geophysical Research and Oceans
+  volume: 126
+  number: 3
+  pages: e2020JC016970
+  year: 2021
+  publisher: Wiley Online Library
+  published_url: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JC016970
+mauquoy2020falkland:
+  title: "Falkland Island peatland development processes and the pervasive presence of fire"
+  authors: 
+        - Mauquoy, Dmitri
+        - Payne, Richard J
+        - Babeshko, Kirill V
+        - Bartlett, Rebecca
+        - Boomer, Ian
+        - Bowey, Hannah
+        - Evans, Chris D
+        - Ring-Hrubesh, Fin
+        - Muirhead, David
+        - O’Callaghan, Matthew
+        - me
+  journal: Quaternary Science Reviews
+  volume: 240
+  pages: 106391
+  year: 2020
+  publisher: Elsevier
+  published_url: https://www.sciencedirect.com/science/article/abs/pii/S027737912030353X
+payne2019peatland:
+  title: "Peatland initiation and carbon accumulation in the Falkland Islands"
+  authors: 
+        - Payne, Richard J
+        - Ring-Hrubesh, Fin
+        - me
+        - Sloan, Thomas J
+        - Evans, Chris D
+        - Mauquoy, Dmitri
+  journal: Quaternary Science Reviews
+  volume: 212
+  pages: 213--218
+  year: 2019
+  publisher: Elsevier
+  published_url: https://www.sciencedirect.com/science/article/abs/pii/S027737911930068X
+rush2018can:
+  title: "Can drones count gulls? Minimal disturbance and semiautomated image processing with an unmanned aerial vehicle for colony-nesting seabirds"
+  authors: 
+        - me
+        - Clarke, Lucy E
+        - Stone, Meg
+        - Wood, Matt J
+  journal: Ecology and evolution
+  volume: 8
+  number: 24
+  pages: 12322--12334
+  year: 2018
+  publisher: Wiley Online Library
+  published_url: https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4495
+barlow2022eqs:
+  title: "Late Quaternary relative sea-level changes at mid-latitudes"
+  authors:
+        - Barlow, Natasha Louise Mary
+        - me
+  year: 2024
+  publisher: Elsevier
+  book: Encyclopedia of Quaternary Science (3rd Edition)
+  editor: 
+        - Elias, Scott
+  published_url: https://www.sciencedirect.com/referencework/9780443299971/encyclopedia-of-quaternary-science

@@ -2,10 +2,10 @@
 title: ""
 echo: false
 section-divs: false
-keep-md: true
+keep-md: false
 ---
 
-```{=html} 
+```{=html}
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
@@ -176,12 +176,14 @@ keep-md: true
     }
   </script>
 ```
-
-<div class="h1" style="background-color: #e41a1c; color: white; text-align: center; margin-top: 0; ">Publications</div>
+::: {.h1 style="background-color: #e41a1c; color: white; text-align: center; margin-top: 0; "}
+Publications
+:::
 
 <!-- #068194 -->
 
 <!-- Start of the code to read and write publication list -->
+
 ```{r}
 read_yaml <- function(file) {
   yaml::yaml.load_file(file)
@@ -277,7 +279,7 @@ for (key in names(yaml_data)) {
     # my script to change authors names
     editors_new <- character(0)
     for (i in 1:length(editors)) {
-      auth <- editor_str[i]
+      auth <- editors[i]
       # Remove leading and trailing spaces and split by commas
       parts <- unlist(strsplit(trimws(auth), ","))
       if (length(parts) > 1) {
@@ -345,7 +347,9 @@ for (key in names(yaml_data)) {
 
 <!-- # Publications -->
 
-## Published work
+## Published work for now this is fucked
+
+will this work
 
 ### Scientific journal articles
 
@@ -394,26 +398,43 @@ cat(paste(
 <!-- ## Work not yet published -->
 
 <!-- ```{r} -->
+
 <!-- #| label: "not-published-year" -->
+
 <!-- #| id: "not-published-year" -->
+
 <!-- #| output: asis -->
+
 <!-- years <- names(pub_strs[["wps"]]) -->
+
 <!-- for (year in rev(years)) { -->
+
 <!--   cat("### ", year, "\n") -->
+
 <!-- } -->
+
 <!-- cat(paste( -->
+
 <!--   "<ul class='list-group list-group-flush'>\n", -->
+
 <!--   sapply(years, function(year) { -->
+
 <!--     paste(pub_strs[["wps"]][[year]], collapse = "\n") -->
+
 <!--   }), -->
+
 <!--   "</ul>\n", -->
+
 <!--   sep = "" -->
+
 <!-- )) -->
+
 <!-- ``` -->
 
 <!-- This si some text -->
 
 <!-- ```{r} -->
-<!-- cat(paste("this is some more text")) -->
-<!-- ``` -->
 
+<!-- cat(paste("this is some more text")) -->
+
+<!-- ``` -->
