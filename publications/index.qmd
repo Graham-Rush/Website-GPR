@@ -5,7 +5,7 @@ section-divs: false
 keep-md: false
 ---
 
-```{=html}
+```{html}
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
@@ -176,7 +176,7 @@ keep-md: false
     }
   </script>
 ```
-::: {.h1 style="background-color: #e41a1c; color: white; text-align: center; margin-top: 0; "}
+::: {.h1 style="background-color: #068194; color: white; text-align: center; margin-top: 0; "}
 Publications
 :::
 
@@ -347,9 +347,7 @@ for (key in names(yaml_data)) {
 
 <!-- # Publications -->
 
-## Published work for now this is fucked
-
-will this work
+## Published work
 
 ### Scientific journal articles
 

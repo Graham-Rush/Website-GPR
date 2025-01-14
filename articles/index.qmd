@@ -2,7 +2,7 @@
 title: ""
 ---
 
-```{=html}
+```{html}
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
@@ -173,6 +173,7 @@ title: ""
     }
   </script>
 ```
+
 ::: {.h1 style="background-color: #068194; color: white; text-align: center; margin-top: 0; "}
 Publications
 :::
