@@ -199,7 +199,7 @@ about:
 
 # Welcome
 
-I am a lecturer in Physical Geography and Environmental Science at <a href="https://www.leedsbeckett.ac.uk/school-of-built-environment-engineering-and-computing/" target="_blank" rel="noopener">Leeds Beckett University</a>
+I am a bad lecturer in Physical Geography and Environmental Science at <a href="https://www.leedsbeckett.ac.uk/school-of-built-environment-engineering-and-computing/" target="_blank" rel="noopener">Leeds Beckett University</a>
 I am interested in the Earth System, particularly the interactions between, ice sheets, oceans and climate and specialises in reconstructing sea-level change in order to understand ice sheet histories. I have a broad interest across the subject area and continues to work and develop projects to study sea-level change and the use of GIS and remote sensing.
 
 <!-- My research primarily focuses on reconstructing sea-level change in order to understand ice-sheet histories and changes to ocean circulation patterns and how these can inform future predictions of environmental change. He combines different types of analysis including fieldwork, laboratory, numerical modelling and spatial analysis in his research and teaching. I've has worked at various sites in the UK, as well as places such as the Falkland Islands, Swiss Alps and Antarctica. -->
