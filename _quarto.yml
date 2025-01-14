@@ -24,7 +24,7 @@ website:
       - text: "Teaching"
         href: teaching/index.qmd
       - text: "Publications"
-        href: articles/index.qmd
+        href: pubs2/index.qmd
       - text: "Experience"
         href: interests/index.qmd
       # - text: "CV"
@@ -70,7 +70,7 @@ website:
           - text: "Teaching"
             href: teaching/index.qmd
           - text: "Publications"
-            href: articles/index.qmd
+            href: pubs2/index.qmd
           - text: "Experience"
             href: interests/index.qmd
           # - text: "Slideshow"

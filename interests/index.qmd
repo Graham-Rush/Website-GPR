@@ -1,6 +1,5 @@
 ---
 title: ""
-author: "Graham Rush"
 ---
 
 ```{=html} 
