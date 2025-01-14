@@ -17,6 +17,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -175,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
 <li>
-<a href="#published-work-for-now-this-is-fucked" id="toc-published-work-for-now-this-is-fucked" class="nav-link active" data-scroll-target="#published-work-for-now-this-is-fucked">Published work for now this is fucked</a>
+<a href="#published-work" id="toc-published-work" class="nav-link active" data-scroll-target="#published-work">Published work</a>
   <ul class="collapse">
 <li><a href="#scientific-journal-articles" id="toc-scientific-journal-articles" class="nav-link" data-scroll-target="#scientific-journal-articles">Scientific journal articles</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">2023</a></li>
@@ -183,179 +217,369 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2020</a></li>
   <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2019</a></li>
   <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">2018</a></li>
-  <li><a href="#book-chapters" id="toc-book-chapters" class="nav-link" data-scroll-target="#book-chapters">Book chapters</a></li>
   <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">2024</a></li>
+  <li><a href="#book-chapters" id="toc-book-chapters" class="nav-link" data-scroll-target="#book-chapters">Book chapters</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">2024</a></li>
   </ul>
 </li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><!-- Slideshow container --><div class="slideshow-container">
-
-  <!-- Full-width images with number and caption text -->
-  
-  <div class="mySlides fade">
-  <!-- <div class="numbertext">5 / 3</div> -->
-  <img src="../img/paper.jpg" style="width:100%"><div class="text"></div>
-  </div>
-  
-  <div class="mySlides fade">
-  <!-- <div class="numbertext">6 / 3</div> -->
-  <img src="../img/survey.jpg" style="width:100%"><div class="text"></div>
-  </div>
-  
-  <div class="mySlides fade">
-  <!-- <div class="numbertext">7 / 3</div> -->
-  <img src="../img/lecture1.jpg" style="width:100%"><div class="text"></div>
-  </div>
-  
-  <div class="mySlides fade">
-  <!-- <div class="numbertext">8 / 3</div> -->
-  <img src="../img/sun.jpg" style="width:100%"><div class="text"></div>
-  </div>
-  
-  <div class="mySlides fade">
-  <!-- <div class="numbertext">9 / 3</div> -->
-  <img src="../img/os1.jpg" style="width:100%"><div class="text"></div>
-  </div>
-  
-  <div class="mySlides fade">
-  <!-- <div class="numbertext">1 / 3</div> -->
-  <img src="../img/ythan-marsh1.jpg" style="width:100%"><div class="text"></div>
-  </div>
-  
-  <div class="mySlides fade">
-  <!-- <div class="numbertext">2 / 3</div> -->
-  <img src="../img/lecture2.jpg" style="width:100%"><div class="text"></div>
-  </div>
-  
-  <div class="mySlides fade">
-  <!-- <div class="numbertext">3 / 3</div> -->
-  <img src="../img/8map.jpg" style="width:100%"><div class="text"></div>
-  </div>
-  
-  <div class="mySlides fade">
-  <!-- <div class="numbertext">4 / 3</div> -->
-  <img src="../img/plane.jpg" style="width:100%"><div class="text"></div>
-  </div>
-  
-  <!-- Next and previous buttons -->
-  <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
-  <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-  </div>
-  
-  <!-- ... Rest of your header content ... -->
-  
-  <style>
-    /* Your CSS styles for the slideshow go here */
-    /* Slideshow container */
-    .slideshow-container {
-      width: 100%; /* Set the desired width for the container. I need this to match the image ratio, as it does now for image 2 */
-      <!-- height: 100px; /* Set the desired height for the container */ -->
-      overflow: hidden; /* Hide any overflowing content */
-      position: relative;
-      margin: auto;
-      border: 2px solid #068194; /* Add a border around the container */
-    }
-  
-    .image-container img {
-    width: 100%; /* Take up the full width of the container */
-      height: 100%; /* Take up the full height of the container */
-      object-fit: cover; /* Maintain aspect ratio and cover entire container */
-      display: block; /* Remove any extra spacing caused by inline display */
-  }
-  
-    /* Hide the images by default */
-    .mySlides {
-      display: none;
-    }
-  
-    /* Next & previous buttons */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;    
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-  
-    /* Caption text */
-    .text {
-      color: #f2f2f2;
-        font-size: 48px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-    }
-  
-    /* Text overlay */
-    .text-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: red; /* Text color */
-        z-index: 1; /* Place the text above the image */
-    }
-  
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-        font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-  
-    /* Fading animation */
-    .fade {
-      animation-name: fade;
-      animation-duration: 30s;
-    }
-    
-    @keyframes fade {
-      from {opacity: .8}
-      to {opacity: 1}
-    }
-  </style>
-<script>
-    // Your JavaScript code for the slideshow goes here
-    let slideIndex = 0;
-    showSlides();
-    
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
-      slides[slideIndex-1].style.display = "block";
-      setTimeout(showSlides, 5000); // Change image every 2 seconds
-    }
-  </script><div class="h1" style="background-color: #e41a1c; color: white; text-align: center; margin-top: 0; ">
+<main class="content" id="quarto-document-content"><div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Slideshow container --&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"slideshow-container"</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- Full-width images with number and caption text --&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"mySlides fade"</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;div class="numbertext"&gt;5 / 3&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../img/paper.jpg"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"mySlides fade"</span><span class="dt">&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;div class="numbertext"&gt;6 / 3&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../img/survey.jpg"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"mySlides fade"</span><span class="dt">&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;div class="numbertext"&gt;7 / 3&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../img/lecture1.jpg"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"mySlides fade"</span><span class="dt">&gt;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;div class="numbertext"&gt;8 / 3&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../img/sun.jpg"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"mySlides fade"</span><span class="dt">&gt;</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;div class="numbertext"&gt;9 / 3&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../img/os1.jpg"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"mySlides fade"</span><span class="dt">&gt;</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;div class="numbertext"&gt;1 / 3&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../img/ythan-marsh1.jpg"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"mySlides fade"</span><span class="dt">&gt;</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;div class="numbertext"&gt;2 / 3&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../img/lecture2.jpg"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"mySlides fade"</span><span class="dt">&gt;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;div class="numbertext"&gt;3 / 3&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../img/8map.jpg"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"mySlides fade"</span><span class="dt">&gt;</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;div class="numbertext"&gt;4 / 3&lt;/div&gt; --&gt;</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../img/plane.jpg"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"text"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- Next and previous buttons --&gt;</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;a class="prev" onclick="plusSlides(-1)"&gt;&amp;#10094;&lt;/a&gt; --&gt;</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;a class="next" onclick="plusSlides(1)"&gt;&amp;#10095;&lt;/a&gt; --&gt;</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- ... Rest of your header content ... --&gt;</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Your CSS styles for the slideshow go here */</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Slideshow container */</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.slideshow-container</span> {</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>      <span class="kw">width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span> <span class="co">/* Set the desired width for the container. I need this to match the image ratio, as it does now for image 2 */</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>      &lt;!<span class="va">--</span> <span class="kw">height</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> <span class="co">/* Set the desired height for the container */</span> <span class="va">--</span><span class="op">&gt;</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>      overflow<span class="in">:</span> hidden; <span class="co">/* Hide any overflowing content */</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>      position<span class="in">:</span> relative;</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>      margin<span class="in">:</span> auto;</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>      border<span class="in">:</span> 2px solid <span class="pp">#068194</span>; <span class="co">/* Add a border around the container */</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.image-container</span> img {</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span> <span class="co">/* Take up the full width of the container */</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>      <span class="kw">height</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span> <span class="co">/* Take up the full height of the container */</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>      <span class="kw">object-fit</span><span class="ch">:</span> <span class="dv">cover</span><span class="op">;</span> <span class="co">/* Maintain aspect ratio and cover entire container */</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>      <span class="kw">display</span><span class="ch">:</span> <span class="dv">block</span><span class="op">;</span> <span class="co">/* Remove any extra spacing caused by inline display */</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Hide the images by default */</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.mySlides</span> {</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>      <span class="kw">display</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Next &amp; previous buttons */</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.prev</span><span class="op">,</span> <span class="fu">.next</span> {</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>      <span class="kw">cursor</span><span class="ch">:</span> <span class="dv">pointer</span><span class="op">;</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>      <span class="kw">position</span><span class="ch">:</span> <span class="dv">absolute</span><span class="op">;</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>      <span class="kw">top</span><span class="ch">:</span> <span class="dv">50</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>      <span class="kw">width</span><span class="ch">:</span> <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>      <span class="kw">margin-top</span><span class="ch">:</span> <span class="dv">-22</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>      <span class="kw">padding</span><span class="ch">:</span> <span class="dv">16</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>      <span class="kw">color</span><span class="ch">:</span> <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>      <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">bold</span><span class="op">;</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>      <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">18</span><span class="dt">px</span><span class="op">;</span>    </span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>      <span class="kw">transition</span><span class="ch">:</span> <span class="dv">0.6</span><span class="dt">s</span> <span class="dv">ease</span><span class="op">;</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>      <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">3</span><span class="dt">px</span> <span class="dv">3</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>      <span class="kw">user-select</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Caption text */</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.text</span> {</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>      <span class="kw">color</span><span class="ch">:</span> <span class="cn">#f2f2f2</span><span class="op">;</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>        <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">48</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>      <span class="kw">padding</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>      <span class="kw">position</span><span class="ch">:</span> <span class="dv">absolute</span><span class="op">;</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>      <span class="kw">bottom</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>      <span class="kw">width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>      <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Text overlay */</span></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.text-overlay</span> {</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>      <span class="kw">position</span><span class="ch">:</span> <span class="dv">absolute</span><span class="op">;</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>      <span class="kw">top</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>      <span class="kw">left</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>      <span class="kw">width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>      <span class="kw">height</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>      <span class="kw">display</span><span class="ch">:</span> <span class="dv">flex</span><span class="op">;</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>      <span class="kw">justify-content</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>      <span class="kw">align-items</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>      <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span> <span class="co">/* Text color */</span></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>        <span class="kw">z-index</span><span class="ch">:</span> <span class="dv">1</span><span class="op">;</span> <span class="co">/* Place the text above the image */</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Number text (1/3 etc) */</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.numbertext</span> {</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>      <span class="kw">color</span><span class="ch">:</span> <span class="cn">#f2f2f2</span><span class="op">;</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>        <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>      <span class="kw">padding</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>      <span class="kw">position</span><span class="ch">:</span> <span class="dv">absolute</span><span class="op">;</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>      <span class="kw">top</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Fading animation */</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.fade</span> {</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>      <span class="kw">animation-name</span><span class="ch">:</span> <span class="dv">fade</span><span class="op">;</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>      <span class="kw">animation-duration</span><span class="ch">:</span> <span class="dv">30</span><span class="dt">s</span><span class="op">;</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>    <span class="im">@keyframes</span> fade {</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>      <span class="dv">from</span> {<span class="kw">opacity</span><span class="ch">:</span> <span class="dv">.8</span>}</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>      <span class="dv">to</span> {<span class="kw">opacity</span><span class="ch">:</span> <span class="dv">1</span>}</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Your JavaScript code for the slideshow goes here</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> slideIndex <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>    <span class="fu">showSlides</span>()<span class="op">;</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">showSlides</span>() {</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> i<span class="op">;</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> slides <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementsByClassName</span>(<span class="st">"mySlides"</span>)<span class="op">;</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> (i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> slides<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>        slides[i]<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">"none"</span><span class="op">;</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>      slideIndex<span class="op">++;</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (slideIndex <span class="op">&gt;</span> slides<span class="op">.</span><span class="at">length</span>) {slideIndex <span class="op">=</span> <span class="dv">1</span>}</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>      slides[slideIndex<span class="op">-</span><span class="dv">1</span>]<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">"block"</span><span class="op">;</span></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>      <span class="pp">setTimeout</span>(showSlides<span class="op">,</span> <span class="dv">5000</span>)<span class="op">;</span> <span class="co">// Change image every 2 seconds</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="h1" style="background-color: #068194; color: white; text-align: center; margin-top: 0; ">
 <p>Publications</p>
 </div>
-<!-- #068194 -->
 <!-- Start of the code to read and write publication list -->
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">read_yaml</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">file</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu">yaml</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/yaml/man/yaml.load.html">yaml.load_file</a></span><span class="op">(</span><span class="va">file</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">readable_list</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">s</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span> <span class="op">&lt;</span> <span class="fl">3</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span>collapse <span class="op">=</span> <span class="st">" and "</span>, <span class="va">s</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  <span class="va">a</span> <span class="op">&lt;-</span> <span class="va">s</span><span class="op">[</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span><span class="op">]</span></span>
+<span>  <span class="va">b</span> <span class="op">&lt;-</span> <span class="va">s</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span><span class="op">]</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span>collapse <span class="op">=</span> <span class="st">", "</span>, <span class="va">a</span><span class="op">)</span>, <span class="st">" and "</span>, <span class="va">b</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">button</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">url</span>, <span class="va">str</span>, <span class="va">icon</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">icon_base</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/substr.html">substr</a></span><span class="op">(</span><span class="va">icon</span>, <span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span></span>
+<span>    <span class="st">"&lt;a class='btn btn-outline-dark btn-sm' href='"</span>, <span class="va">url</span>,</span>
+<span>    <span class="st">"' target='_blank' rel='noopener noreferrer'&gt;"</span>,</span>
+<span>    <span class="st">"&lt;i class='"</span>, <span class="va">icon_base</span>, <span class="st">" "</span>, <span class="va">icon</span>,</span>
+<span>    <span class="st">"' role='img' aria-label='"</span>, <span class="va">str</span>, <span class="st">"'&gt;&lt;/i&gt;"</span>, <span class="va">str</span>,</span>
+<span>    <span class="st">"&lt;/a&gt;"</span>, sep <span class="op">=</span> <span class="st">""</span></span>
+<span>  <span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">yaml_data</span> <span class="op">&lt;-</span> <span class="fu">read_yaml</span><span class="op">(</span><span class="st">"pubs.yaml"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in readLines(con, warn = readLines.warn): incomplete final line found
+on 'pubs.yaml'</code></pre>
+</div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pub_strs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>pubs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="op">)</span>, books <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="op">)</span>, wps <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">key</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">yaml_data</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">data</span> <span class="op">&lt;-</span> <span class="va">yaml_data</span><span class="op">[[</span><span class="va">key</span><span class="op">]</span><span class="op">]</span></span>
+<span>  <span class="va">title_str</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[[</span><span class="st">"title"</span><span class="op">]</span><span class="op">]</span></span>
+<span>  <span class="va">authors</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[[</span><span class="st">"authors"</span><span class="op">]</span><span class="op">]</span></span>
+<span>  </span>
+<span>  <span class="co"># my script to change authors names</span></span>
+<span>  <span class="va">authors_new</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">character</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span></span>
+<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">authors</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">auth</span> <span class="op">&lt;-</span> <span class="va">authors</span><span class="op">[</span><span class="va">i</span><span class="op">]</span></span>
+<span>    <span class="co"># Remove leading and trailing spaces and split by commas</span></span>
+<span>    <span class="va">parts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/strsplit.html">strsplit</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/trimws.html">trimws</a></span><span class="op">(</span><span class="va">auth</span><span class="op">)</span>, <span class="st">","</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">parts</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="co"># Rearrange the parts and create initials</span></span>
+<span>    <span class="va">names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/strsplit.html">strsplit</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/trimws.html">trimws</a></span><span class="op">(</span><span class="va">parts</span><span class="op">[</span><span class="fl">2</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">parts</span><span class="op">)</span><span class="op">]</span><span class="op">)</span>, <span class="st">" "</span><span class="op">)</span></span>
+<span>    <span class="va">names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span> <span class="op">(</span><span class="va">names</span><span class="op">)</span></span>
+<span>    <span class="va">initials</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/substr.html">substr</a></span><span class="op">(</span><span class="va">names</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>, <span class="st">"."</span><span class="op">)</span></span>
+<span>    <span class="va">new_string</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">initials</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>, collapse <span class="op">=</span> <span class="st">" "</span><span class="op">)</span></span>
+<span>    <span class="va">rearranged_string</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">new_string</span>, <span class="va">parts</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, sep <span class="op">=</span> <span class="st">" "</span><span class="op">)</span></span>
+<span>    <span class="co"># cat(rearranged_string, "\n")</span></span>
+<span>    <span class="va">authors_new</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">rearranged_string</span></span>
+<span>    <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>      <span class="va">authors_new</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">auth</span></span>
+<span>    <span class="op">}</span></span>
+<span>  <span class="op">}</span></span>
+<span>  <span class="va">authors</span> <span class="op">&lt;-</span> <span class="va">authors_new</span></span>
+<span>  <span class="co"># to here</span></span>
+<span>  </span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NULL.html">is.null</a></span><span class="op">(</span><span class="va">authors</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">authors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"me"</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  <span class="va">authors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">authors</span> <span class="op">!=</span> <span class="st">"me"</span>, <span class="va">authors</span>, <span class="st">"&lt;strong&gt;G. Rush&lt;/strong&gt;"</span><span class="op">)</span></span>
+<span>  <span class="va">author_str</span> <span class="op">&lt;-</span> <span class="fu">readable_list</span><span class="op">(</span><span class="va">authors</span><span class="op">)</span></span>
+<span>  <span class="va">year_str</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[[</span><span class="st">"year"</span><span class="op">]</span><span class="op">]</span></span>
+<span>  <span class="va">journal_str</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[[</span><span class="st">"journal"</span><span class="op">]</span><span class="op">]</span></span>
+<span>  </span>
+<span>  <span class="va">buttons</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">character</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span></span>
+<span>  <span class="co"># preprint &lt;- data[["preprint"]]</span></span>
+<span>  <span class="co"># if (!is.null(preprint)) {</span></span>
+<span>  <span class="co">#   buttons &lt;- c(buttons, button(preprint, "Preprint", "bi-file-earmark-pdf"))</span></span>
+<span>  <span class="co"># }</span></span>
+<span>  </span>
+<span>  <span class="co"># github &lt;- data[["github"]]</span></span>
+<span>  <span class="co"># if (!is.null(github)) {</span></span>
+<span>  <span class="co">#   buttons &lt;- c(buttons, button(github, "Github", "bi-github"))</span></span>
+<span>  <span class="co"># }</span></span>
+<span>  </span>
+<span>  <span class="va">pub_url</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[[</span><span class="st">"published_url"</span><span class="op">]</span><span class="op">]</span></span>
+<span>  <span class="va">venue</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[[</span><span class="st">"venue"</span><span class="op">]</span><span class="op">]</span></span>
+<span>  <span class="va">working_paper</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/NULL.html">is.null</a></span><span class="op">(</span><span class="va">pub_url</span><span class="op">)</span></span>
+<span>  <span class="va">book_str</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[[</span><span class="st">"book"</span><span class="op">]</span><span class="op">]</span></span>
+<span>  <span class="va">publisher_str</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[[</span><span class="st">"publisher"</span><span class="op">]</span><span class="op">]</span></span>
+<span>  <span class="va">editors</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[[</span><span class="st">"editor"</span><span class="op">]</span><span class="op">]</span></span>
+<span>  </span>
+<span>  <span class="va">pub_str</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span></span>
+<span>    <span class="co"># author_str, " (", year_str, ") /"", title_str, "/".", sep = ""</span></span>
+<span>    <span class="va">author_str</span>, <span class="st">" ("</span>, <span class="va">year_str</span>, <span class="st">") \""</span>, <span class="va">title_str</span>, <span class="st">".\""</span>, <span class="st">" &lt;i&gt;"</span>, <span class="va">journal_str</span>, <span class="st">".&lt;/i&gt;"</span>, sep <span class="op">=</span> <span class="st">""</span></span>
+<span>  <span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NULL.html">is.null</a></span><span class="op">(</span><span class="va">venue</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">pub_str</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">pub_str</span>, <span class="st">" &lt;em&gt;"</span>, <span class="va">venue</span>, <span class="st">"&lt;/em&gt;"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  </span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NULL.html">is.null</a></span><span class="op">(</span><span class="va">book_str</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NULL.html">is.null</a></span><span class="op">(</span><span class="va">editors</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span> </span>
+<span>    <span class="co"># my script to change authors names</span></span>
+<span>    <span class="va">editors_new</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">character</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">editors</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>      <span class="va">auth</span> <span class="op">&lt;-</span> <span class="va">editors</span><span class="op">[</span><span class="va">i</span><span class="op">]</span></span>
+<span>      <span class="co"># Remove leading and trailing spaces and split by commas</span></span>
+<span>      <span class="va">parts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/strsplit.html">strsplit</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/trimws.html">trimws</a></span><span class="op">(</span><span class="va">auth</span><span class="op">)</span>, <span class="st">","</span><span class="op">)</span><span class="op">)</span></span>
+<span>      <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">parts</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span>      <span class="co"># Rearrange the parts and create initials</span></span>
+<span>      <span class="va">names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/strsplit.html">strsplit</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/trimws.html">trimws</a></span><span class="op">(</span><span class="va">parts</span><span class="op">[</span><span class="fl">2</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">parts</span><span class="op">)</span><span class="op">]</span><span class="op">)</span>, <span class="st">" "</span><span class="op">)</span></span>
+<span>      <span class="va">names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span> <span class="op">(</span><span class="va">names</span><span class="op">)</span></span>
+<span>      <span class="va">initials</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/substr.html">substr</a></span><span class="op">(</span><span class="va">names</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>, <span class="st">"."</span><span class="op">)</span></span>
+<span>      <span class="va">new_string</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">initials</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>, collapse <span class="op">=</span> <span class="st">" "</span><span class="op">)</span></span>
+<span>      <span class="va">rearranged_string</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">new_string</span>, <span class="va">parts</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, sep <span class="op">=</span> <span class="st">" "</span><span class="op">)</span></span>
+<span>      <span class="co"># cat(rearranged_string, "\n")</span></span>
+<span>      <span class="va">editors_new</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">rearranged_string</span></span>
+<span>      <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>        <span class="va">editors_new</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">auth</span></span>
+<span>      <span class="op">}</span></span>
+<span>    <span class="op">}</span></span>
+<span>    <span class="va">editors</span> <span class="op">&lt;-</span> <span class="va">editors_new</span></span>
+<span>    </span>
+<span>    <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NULL.html">is.null</a></span><span class="op">(</span><span class="va">editors</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">editors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"me"</span><span class="op">)</span></span>
+<span>    <span class="op">}</span></span>
+<span>    <span class="va">editors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">editors</span> <span class="op">!=</span> <span class="st">"me"</span>, <span class="va">editors</span>, <span class="st">"&lt;strong&gt;G. Rush&lt;/strong&gt;"</span><span class="op">)</span></span>
+<span>    <span class="va">editors_str</span> <span class="op">&lt;-</span> <span class="fu">readable_list</span><span class="op">(</span><span class="va">editors</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="va">pub_str</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">author_str</span>, <span class="st">" ("</span>, <span class="va">year_str</span>, <span class="st">") \""</span>, <span class="va">title_str</span>, <span class="st">",\""</span>, <span class="st">" in &lt;i&gt;"</span>, <span class="va">book_str</span>, <span class="st">", edited by "</span>, <span class="va">editors_str</span>, <span class="st">", "</span>, <span class="va">publisher_str</span>, <span class="st">".&lt;/i&gt;"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
+<span>    <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>      <span class="va">pub_str</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">author_str</span>, <span class="st">" ("</span>, <span class="va">year_str</span>, <span class="st">") \""</span>, <span class="va">title_str</span>, <span class="st">",\""</span>, <span class="st">" in &lt;i&gt;"</span>, <span class="va">book_str</span>, <span class="st">".&lt;/i&gt; "</span>, <span class="va">publisher_str</span>, <span class="st">"."</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
+<span>    <span class="op">}</span></span>
+<span>  <span class="op">}</span></span>
+<span>  </span>
+<span>  </span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="va">working_paper</span><span class="op">)</span> <span class="op">{</span> <span class="co"># add the reference to the relevant list </span></span>
+<span>    <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="va">year_str</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">pub_strs</span><span class="op">[[</span><span class="st">"wps"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>      <span class="va">pub_strs</span><span class="op">[[</span><span class="st">"wps"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">year_str</span><span class="op">)</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">character</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">}</span></span>
+<span>    <span class="va">pub_strs</span><span class="op">[[</span><span class="st">"wps"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">year_str</span><span class="op">)</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>      <span class="va">pub_strs</span><span class="op">[[</span><span class="st">"wps"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">year_str</span><span class="op">)</span><span class="op">]</span><span class="op">]</span>,</span>
+<span>      <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"&lt;li class='list-group-item'&gt;"</span>, <span class="va">pub_str</span>, <span class="st">"&lt;br&gt;"</span>,</span>
+<span>            <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">buttons</span>, collapse <span class="op">=</span> <span class="st">" "</span><span class="op">)</span>, <span class="st">"&lt;/li&gt;"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>    <span class="kw">if</span> <span class="op">(</span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NULL.html">is.null</a></span><span class="op">(</span><span class="va">journal_str</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>      <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="va">year_str</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">pub_strs</span><span class="op">[[</span><span class="st">"pubs"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>      <span class="va">pub_strs</span><span class="op">[[</span><span class="st">"pubs"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">year_str</span><span class="op">)</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">character</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">}</span></span>
+<span>    <span class="va">buttons</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">buttons</span>, <span class="fu">button</span><span class="op">(</span><span class="va">pub_url</span>, <span class="st">"Access the orignal article"</span>, <span class="st">"ai-archive"</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="va">pub_strs</span><span class="op">[[</span><span class="st">"pubs"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">year_str</span><span class="op">)</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>      <span class="va">pub_strs</span><span class="op">[[</span><span class="st">"pubs"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">year_str</span><span class="op">)</span><span class="op">]</span><span class="op">]</span>,</span>
+<span>      <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"&lt;li class='list-group-item'&gt;"</span>, <span class="va">pub_str</span>, <span class="st">"&lt;br&gt;"</span>,</span>
+<span>            <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">buttons</span>, collapse <span class="op">=</span> <span class="st">" "</span><span class="op">)</span>, <span class="st">"&lt;/li&gt;"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span>    <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>    <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="va">year_str</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">pub_strs</span><span class="op">[[</span><span class="st">"books"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>      <span class="va">pub_strs</span><span class="op">[[</span><span class="st">"books"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">year_str</span><span class="op">)</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">character</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span></span>
+<span>    <span class="op">}</span></span>
+<span>    <span class="va">buttons</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">buttons</span>, <span class="fu">button</span><span class="op">(</span><span class="va">pub_url</span>, <span class="st">"Access the orignal article"</span>, <span class="st">"ai-archive"</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="va">pub_strs</span><span class="op">[[</span><span class="st">"books"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">year_str</span><span class="op">)</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>      <span class="va">pub_strs</span><span class="op">[[</span><span class="st">"books"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">year_str</span><span class="op">)</span><span class="op">]</span><span class="op">]</span>,</span>
+<span>      <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"&lt;li class='list-group-item'&gt;"</span>, <span class="va">pub_str</span>, <span class="st">"&lt;br&gt;"</span>,</span>
+<span>            <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">buttons</span>, collapse <span class="op">=</span> <span class="st">" "</span><span class="op">)</span>, <span class="st">"&lt;/li&gt;"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span>    <span class="op">}</span></span>
+<span>  <span class="op">}</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <!-- # Publications -->
-<section id="published-work-for-now-this-is-fucked" class="level2"><h2 class="anchored" data-anchor-id="published-work-for-now-this-is-fucked">Published work for now this is fucked</h2>
-<p>will this work</p>
+<section id="published-work" class="level2"><h2 class="anchored" data-anchor-id="published-work">Published work</h2>
 <section id="scientific-journal-articles" class="level3"><h3 class="anchored" data-anchor-id="scientific-journal-articles">Scientific journal articles</h3>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">years</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">pub_strs</span><span class="op">[[</span><span class="st">"pubs"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="co"># for (year in rev(years)) {</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">year</span> <span class="kw">in</span> <span class="va">years</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="st">"### "</span>, <span class="va">year</span>, <span class="st">"\n"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span></span>
+<span>  <span class="co"># "&lt;ul class='list-group list-group-flush'&gt;\n",</span></span>
+<span>  <span class="co"># sapply(years, function(year) {</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">pub_strs</span><span class="op">[[</span><span class="st">"pubs"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">]</span><span class="op">]</span>, collapse <span class="op">=</span> <span class="st">"\n"</span><span class="op">)</span></span>
+<span>  <span class="co"># }),</span></span>
+<span>  <span class="co"># "&lt;/ul&gt;\n",</span></span>
+<span>  <span class="co"># sep = ""</span></span>
+<span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section><section id="section" class="level3"><h3 class="anchored" data-anchor-id="section">2023</h3>
 <li class="list-group-item">
 J. Hill, <strong>G. Rush</strong>, J. Peakall, M. Johnson, L. Hodson, N. L. Barlow, E. T. Bowman, W. R. Gehrels, D. M. Hodgson and G. Kesserwani (2023) “Resolving tsunami wave dynamics: integrating sedimentology and numerical modelling.” <i>The Depositional Record.</i><br><a class="btn btn-outline-dark btn-sm" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/dep2.247" target="_blank" rel="noopener noreferrer"><i class="ai ai-archive" role="img" aria-label="Access the orignal article"></i>Access the orignal article</a>
@@ -379,8 +603,25 @@ R. J. Payne, F. Ring-Hrubesh, <strong>G. Rush</strong>, T. J. Sloan, C. D. Evans
 <li class="list-group-item">
 <strong>G. Rush</strong>, L. E. Clarke, M. Stone and M. J. Wood (2018) “Can drones count gulls? Minimal disturbance and semiautomated image processing with an unmanned aerial vehicle for colony-nesting seabirds.” <i>Ecology and evolution.</i><br><a class="btn btn-outline-dark btn-sm" href="https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.4495" target="_blank" rel="noopener noreferrer"><i class="ai ai-archive" role="img" aria-label="Access the orignal article"></i>Access the orignal article</a>
 </li>
-</section><section id="book-chapters" class="level3"><h3 class="anchored" data-anchor-id="book-chapters">Book chapters</h3>
 </section><section id="section-5" class="level3"><h3 class="anchored" data-anchor-id="section-5">2024</h3>
+<li class="list-group-item">
+<strong>G. Rush</strong>, P. McDarby, R. Edwards, Y. Milker, E. Garrett and W. R. Gehrels (2024) “Development of an intertidal foraminifera training set for the North Sea and an assessment of its application for Holocene sea-level reconstructions.” <i>Marine Micropaleontology.</i><br><a class="btn btn-outline-dark btn-sm" href="https://www.sciencedirect.com/science/article/abs/pii/S0377839821000967" target="_blank" rel="noopener noreferrer"><i class="ai ai-archive" role="img" aria-label="Access the orignal article"></i>Access the orignal article</a>
+</li>
+</section><section id="book-chapters" class="level3"><h3 class="anchored" data-anchor-id="book-chapters">Book chapters</h3>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">years</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">pub_strs</span><span class="op">[[</span><span class="st">"books"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="co"># for (year in rev(years)) {</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">year</span> <span class="kw">in</span> <span class="va">years</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="st">"### "</span>, <span class="va">year</span>, <span class="st">"\n"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span></span>
+<span>  <span class="co"># "&lt;ul class='list-group list-group-flush'&gt;\n",</span></span>
+<span>  <span class="co"># sapply(years, function(year) {</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">pub_strs</span><span class="op">[[</span><span class="st">"books"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">]</span><span class="op">]</span>, collapse <span class="op">=</span> <span class="st">"\n"</span><span class="op">)</span></span>
+<span>  <span class="co"># }),</span></span>
+<span>  <span class="co"># "&lt;/ul&gt;\n",</span></span>
+<span>  <span class="co"># sep = ""</span></span>
+<span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="section-6" class="level3"><h3 class="anchored" data-anchor-id="section-6">2024</h3>
 <li class="list-group-item">
 N. L. M. Barlow and <strong>G. Rush</strong> (2024) “Late Quaternary relative sea-level changes at mid-latitudes,” in <i>Encyclopedia of Quaternary Science (3rd Edition), edited by S. Elias, Elsevier.</i><br><a class="btn btn-outline-dark btn-sm" href="https://www.sciencedirect.com/referencework/9780443299971/encyclopedia-of-quaternary-science" target="_blank" rel="noopener noreferrer"><i class="ai ai-archive" role="img" aria-label="Access the orignal article"></i>Access the orignal article</a>
 </li>

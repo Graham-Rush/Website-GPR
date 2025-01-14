@@ -111,3 +111,18 @@ barlow2022eqs:
   editor: 
         - Elias, Scott
   published_url: https://www.sciencedirect.com/referencework/9780443299971/encyclopedia-of-quaternary-science
+rush2024development:
+  title: "Development of an intertidal foraminifera training set for the North Sea and an assessment of its application for Holocene sea-level reconstructions"
+  authors: 
+        - me
+        - McDarby, Patrick
+        - Edwards, Robin
+        - Milker, Yvonne
+        - Garrett, Ed
+        - Gehrels, W Roland
+  journal: Marine Micropaleontology
+  volume: 169
+  pages: 102055
+  year: 2024
+  publisher: Elsevier
+  published_url: https://www.sciencedirect.com/science/article/abs/pii/S0377839821000967
